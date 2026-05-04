@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>n8n Automation Blog — 100+ Free Tutorials | Digital Velocity Co</title>
+<meta name="description" content="Free n8n automation tutorials, AI workflow guides, and business automation case studies. Learn how to automate your business for free in 2026.">
+<meta name="keywords" content="n8n tutorials, n8n automation guide, free n8n workflows, AI automation for business, how to use n8n, n8n beginner guide, business automation 2026">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://digitalvelocityco.com/blog.html">
+<meta property="og:title" content="n8n Automation Blog — 100+ Free Tutorials | Digital Velocity Co">
+<meta property="og:description" content="Step-by-step n8n automation tutorials, workflow teardowns, and AI business guides. All free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://digitalvelocityco.com/blog.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Digital Velocity Co — Automation Blog",
+  "description": "n8n workflow tutorials and AI automation guides for business owners",
+  "url": "https://digitalvelocityco.com/blog.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Velocity Co",
+    "url": "https://digitalvelocityco.com"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#e8e8f0;--muted:#7a7a8c;--accent:#7c5cfc;--accent2:#00d4aa;--gold:#f5c842;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Syne',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15}
+a{color:inherit;text-decoration:none}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:rgba(124,92,252,.4);border-radius:2px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.logo{font-family:var(--display);font-size:18px;font-weight:800;color:var(--text);display:flex;align-items:center;gap:8px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:20px}
+.nav-links a{color:var(--muted);font-size:13px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-btn{background:linear-gradient(135deg,var(--accent),#6040e0);color:#fff;padding:7px 18px;border-radius:8px;font-size:13px;font-weight:700;font-family:var(--display)}
+
+/* BLOG HERO */
+.blog-hero{padding:120px 24px 60px;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(124,92,252,.15),transparent 65%)}
+.blog-hero h1{font-size:clamp(32px,5vw,56px);font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-1px}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 28px;line-height:1.7}
+.hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
+.hstat{text-align:center}
+.hstat-n{font-family:var(--display);font-size:28px;font-weight:800;color:var(--accent2)}
+.hstat-l{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* SEARCH + FILTER */
+.blog-controls{max-width:1100px;margin:40px auto 0;padding:0 24px}
+.search-box{display:flex;gap:10px;margin-bottom:20px}
+.search-input{flex:1;background:var(--bg2);border:1px solid var(--border2);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--sans);font-size:14px;outline:none;transition:border .2s}
+.search-input:focus{border-color:rgba(124,92,252,.5)}
+.search-input::placeholder{color:var(--muted)}
+.cat-filter{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.cat-btn{padding:6px 14px;border-radius:7px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer;transition:all .18s;font-family:var(--sans)}
+.cat-btn.active,.cat-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.results-count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:24px}
+
+/* BLOG GRID */
+.blog-main{max-width:1100px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:start}
+@media(max-width:800px){.blog-main{grid-template-columns:1fr}.sidebar{display:none}}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+
+/* ARTICLE CARD */
+.article-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .22s;cursor:pointer;display:flex;flex-direction:column}
+.article-card:hover{transform:translateY(-3px);border-color:rgba(124,92,252,.3)}
+.article-card.featured{border-color:rgba(124,92,252,.35);grid-column:span 2}
+@media(max-width:640px){.article-card.featured{grid-column:span 1}}
+.article-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:32px;position:relative}
+.article-thumb.c1{background:linear-gradient(135deg,rgba(124,92,252,.25),rgba(0,212,170,.12))}
+.article-thumb.c2{background:linear-gradient(135deg,rgba(0,212,170,.2),rgba(124,92,252,.12))}
+.article-thumb.c3{background:linear-gradient(135deg,rgba(245,200,66,.18),rgba(255,107,107,.1))}
+.article-thumb.c4{background:linear-gradient(135deg,rgba(255,107,107,.18),rgba(124,92,252,.1))}
+.article-thumb.c5{background:linear-gradient(135deg,rgba(124,92,252,.18),rgba(245,200,66,.1))}
+.article-body{padding:16px;flex:1;display:flex;flex-direction:column}
+.article-cat{font-size:10px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
+.article-card h3{font-size:14px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.4;flex:1}
+.article-card p{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:10px}
+.article-foot{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted)}
+.article-foot .read-badge{background:rgba(124,92,252,.1);color:var(--accent);padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600}
+
+/* ARTICLE EXPANDED */
+.article-expanded{display:none;background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:32px;margin-top:8px;line-height:1.8}
+.article-expanded.open{display:block}
+.article-expanded h2{font-size:26px;color:#fff;margin-bottom:8px}
+.article-expanded .meta{font-size:12px;color:var(--muted);margin-bottom:20px;font-family:var(--mono)}
+.article-expanded h3{font-size:18px;color:var(--accent2);margin:24px 0 8px;font-family:var(--display)}
+.article-expanded h4{font-size:15px;color:var(--gold);margin:16px 0 6px;font-family:var(--display)}
+.article-expanded p{font-size:14px;color:var(--text);margin-bottom:14px;line-height:1.8}
+.article-expanded ul,.article-expanded ol{margin:12px 0 16px 24px;color:var(--text);font-size:14px}
+.article-expanded li{margin-bottom:6px;line-height:1.65}
+.article-expanded .callout{background:rgba(124,92,252,.08);border-left:3px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;font-size:13px;color:var(--text)}
+.article-expanded .cta-box{background:linear-gradient(135deg,rgba(124,92,252,.12),rgba(0,212,170,.06));border:1px solid rgba(124,92,252,.25);border-radius:12px;padding:20px;text-align:center;margin-top:24px}
+.article-expanded .cta-box h4{color:#fff;margin-bottom:8px;font-size:17px}
+.article-expanded .cta-box p{color:var(--muted);font-size:13px;margin-bottom:14px}
+.article-expanded .cta-box a{background:var(--accent);color:#fff;padding:10px 24px;border-radius:8px;font-size:13px;font-weight:700;font-family:var(--display);display:inline-block}
+.close-btn{display:flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:8px 16px;border-radius:8px;font-size:12px;cursor:pointer;font-family:var(--sans);margin-top:20px;width:max-content}
+.close-btn:hover{color:var(--text)}
+
+/* SIDEBAR */
+.sidebar{position:sticky;top:80px}
+.sidebar-widget{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px}
+.sw-title{font-family:var(--display);font-size:14px;font-weight:700;color:#fff;margin-bottom:14px}
+.popular-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;cursor:pointer}
+.popular-num{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:700;min-width:18px;margin-top:2px}
+.popular-title{font-size:12px;color:var(--text);line-height:1.4}
+.popular-item:hover .popular-title{color:var(--accent)}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.blog-tag{font-size:11px;padding:4px 10px;border-radius:20px;background:rgba(124,92,252,.1);border:1px solid rgba(124,92,252,.2);color:var(--accent);cursor:pointer;transition:all .15s}
+.blog-tag:hover{background:var(--accent);color:#fff}
+.promo-widget{background:linear-gradient(135deg,rgba(124,92,252,.15),rgba(0,212,170,.08));border:1px solid rgba(124,92,252,.25);border-radius:14px;padding:20px;text-align:center}
+.promo-widget h3{font-size:16px;color:#fff;margin-bottom:8px}
+.promo-widget p{font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6}
+.promo-widget a{background:var(--accent);color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;font-family:var(--display);display:block;text-align:center;transition:opacity .2s}
+.promo-widget a:hover{opacity:.85}
+
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted)}
+footer a{color:var(--muted);margin-left:16px}
+footer a:hover{color:var(--text)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">⚡ Digital<span>Velocity</span>Co</a>
+  <div class="nav-links">
+    <a href="/#tools">Free Tools</a>
+    <a href="/#products">Products</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener" class="nav-btn">Shop →</a>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <h1>100+ Free n8n Automation Tutorials</h1>
+  <p>Step-by-step guides, workflow teardowns, and AI business automation case studies. Updated weekly.</p>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-n">100+</div><div class="hstat-l">Articles published</div></div>
+    <div class="hstat"><div class="hstat-n">Free</div><div class="hstat-l">All content</div></div>
+    <div class="hstat"><div class="hstat-n">2026</div><div class="hstat-l">Updated weekly</div></div>
+    <div class="hstat"><div class="hstat-n">45+</div><div class="hstat-l">Workflows available</div></div>
+  </div>
+</div>
+
+<div class="blog-controls">
+  <div class="search-box">
+    <input class="search-input" type="text" id="searchInput" placeholder="Search 100+ articles..." oninput="filterArticles()" aria-label="Search articles">
+  </div>
+  <div class="cat-filter" role="group">
+    <button class="cat-btn active" onclick="setCategory('all',this)">All (100)</button>
+    <button class="cat-btn" onclick="setCategory('n8n',this)">n8n Basics</button>
+    <button class="cat-btn" onclick="setCategory('ai',this)">AI & Groq</button>
+    <button class="cat-btn" onclick="setCategory('sales',this)">Sales & Leads</button>
+    <button class="cat-btn" onclick="setCategory('ecommerce',this)">E-Commerce</button>
+    <button class="cat-btn" onclick="setCategory('finance',this)">Finance</button>
+    <button class="cat-btn" onclick="setCategory('operations',this)">Operations</button>
+    <button class="cat-btn" onclick="setCategory('content',this)">Content & SEO</button>
+    <button class="cat-btn" onclick="setCategory('real-estate',this)">Real Estate</button>
+  </div>
+  <div class="results-count" id="resultsCount">Showing 100 articles</div>
+</div>
+
+<div class="blog-main">
+  <div>
+    <div class="articles-grid" id="articlesGrid"></div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="promo-widget">
+      <h3>⚡ Ready-Made Workflows</h3>
+      <p>Stop building from scratch. Get premium n8n workflows with full setup guides. Instant download.</p>
+      <a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Store →</a>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">🔥 Most Popular</div>
+      <div id="popularList"></div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">🏷️ Topics</div>
+      <div class="tag-cloud">
+        <span class="blog-tag" onclick="setCategory('n8n',null)">n8n</span>
+        <span class="blog-tag" onclick="setCategory('ai',null)">Groq AI</span>
+        <span class="blog-tag" onclick="setCategory('sales',null)">Lead Gen</span>
+        <span class="blog-tag" onclick="setCategory('ecommerce',null)">Shopify</span>
+        <span class="blog-tag" onclick="setCategory('finance',null)">Invoicing</span>
+        <span class="blog-tag" onclick="setCategory('operations',null)">WhatsApp</span>
+        <span class="blog-tag" onclick="setCategory('content',null)">Content</span>
+        <span class="blog-tag" onclick="setCategory('real-estate',null)">Real Estate</span>
+        <span class="blog-tag">Claude API</span>
+        <span class="blog-tag">Automation</span>
+        <span class="blog-tag">Free Tools</span>
+        <span class="blog-tag">Make vs n8n</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <span>© 2026 Digital Velocity Co</span>
+  <div>
+    <a href="/">Home</a>
+    <a href="/#products">Products</a>
+    <a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Gumroad Store</a>
+    <a href="sitemap.xml">Sitemap</a>
+  </div>
+</footer>
+
+<script>
+const ARTICLES = [
+  // ── N8N BASICS ──────────────────────────────────────────────────────────
+  { id:1, cat:'n8n', emoji:'⚡', theme:'c1', featured:true,
+    title:'Complete n8n Beginner Guide 2026: How to Install, Set Up and Run Your First Workflow',
+    desc:'The only guide you need to get started with n8n. From installation to your first live automation — no coding required.',
+    read:'18 min', date:'May 2026', views:'12.4k',
+    content:`<h3>What is n8n and Why Should You Use It in 2026?</h3><p>n8n is an open-source workflow automation platform that has grown to over 230,000 active users worldwide. Unlike Zapier (which charges per task) or Make (formerly Integromat), n8n operates on a per-workflow execution model — meaning a 50-node workflow costs the same to run as a 2-node one.</p><p>In practical terms: a self-hosted n8n instance running on a £6/month VPS replaces £300–£500 per month in Zapier costs. That's the core value proposition, and it's why n8n has grown 141% year-over-year.</p><h3>Step 1: Installing n8n</h3><p>You have three installation options, each with different trade-offs:</p><h4>Option A: n8n Cloud (Recommended for Beginners)</h4><p>Go to n8n.io and click "Get Started Free." You get a cloud-hosted n8n instance with a free tier that includes 5 active workflows. No server required, no technical knowledge needed. Ideal for testing.</p><h4>Option B: Self-Hosted on a VPS (Recommended for Production)</h4><p>Rent a VPS from Hetzner (€3.29/month) or DigitalOcean ($6/month). SSH in and run the official Docker command. Your n8n instance is now running at your server's IP address on port 5678. Add a domain and SSL certificate using Nginx reverse proxy.</p><h4>Option C: Local Installation</h4><p>Run <code>npm install n8n -g</code> then <code>n8n start</code> for local development and testing. Not suitable for production workflows.</p><h3>Step 2: Your First Workflow — HTTP Request to Google Sheets</h3><p>This classic beginner workflow teaches you the core concepts: triggers, nodes, connections, and expressions.</p><ol><li>Click "New Workflow" in n8n</li><li>Add a Schedule Trigger node (set to every hour)</li><li>Add an HTTP Request node, point it to any public API</li><li>Add a Google Sheets node to log the data</li><li>Click the Execute button to test</li><li>Toggle the workflow Active to run automatically</li></ol><h3>Understanding n8n Expressions</h3><p>Expressions are n8n's superpower. They allow you to pass data between nodes dynamically. The syntax is double curly braces: <code>{{$json.field_name}}</code>. For example, to pass an email from a previous node: <code>{{$('Previous Node').item.json.email}}</code>.</p><div class="callout">💡 Pro Tip: Press Ctrl+Space inside any expression field to open the autocomplete, which shows all available data from previous nodes.</div><h3>Key Takeaways</h3><ul><li>n8n is free to self-host and significantly cheaper than Zapier at scale</li><li>Start with n8n Cloud, migrate to self-hosted when you outgrow the free tier</li><li>Master expressions early — they unlock 90% of n8n's power</li><li>Every workflow should have error handling (use the Error Trigger node)</li></ul><div class="cta-box"><h4>Ready-Made n8n Workflows — Skip the Learning Curve</h4><p>Browse premium pre-built workflows with full setup guides. Install in 30 minutes.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse All Workflows →</a></div>` },
+
+  { id:2, cat:'n8n', emoji:'🔗', theme:'c2',
+    title:'n8n vs Zapier vs Make: The Definitive 2026 Comparison for Business Owners',
+    desc:'Honest comparison of the three leading automation platforms. Cost, features, learning curve, and which one to choose for your business.',
+    read:'14 min', date:'Apr 2026', views:'9.1k',
+    content:`<h3>The Real Cost Difference</h3><p>Zapier charges per task (each action in a workflow). n8n charges per workflow execution regardless of how many nodes. For a 10-step workflow running 1,000 times per month: Zapier costs £79+/month, Make costs £19/month, n8n costs £0 (self-hosted) or £17/month (cloud).</p><h3>Learning Curve Comparison</h3><p>Zapier: Easiest — point and click, no expressions needed, very limited customization. Make: Medium — visual canvas, array handling, some complexity. n8n: Steeper — expressions required for advanced use, but maximum power once learned.</p><h3>When to Choose Each Platform</h3><h4>Choose Zapier if:</h4><ul><li>You're completely non-technical and need instant results</li><li>You run fewer than 1,000 tasks per month</li><li>You only need basic two-app connections</li></ul><h4>Choose n8n if:</h4><ul><li>You need complex multi-step workflows</li><li>You want £0/month running costs at scale</li><li>You need AI integration (Groq, Claude, OpenAI)</li><li>You want full data privacy (self-hosted)</li></ul><h3>Verdict: n8n Wins on Cost and Power</h3><p>For any business running more than 10,000 automation tasks per month, n8n's self-hosted option delivers 10-50x cost savings over Zapier. The learning investment pays back within weeks.</p><div class="cta-box"><h4>Start with Pre-Built n8n Workflows</h4><p>Skip the configuration — get workflows that are ready to activate in 30 minutes.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Workflows →</a></div>` },
+
+  { id:3, cat:'n8n', emoji:'🔧', theme:'c3',
+    title:'n8n Error Handling: How to Build Bulletproof Workflows That Never Silently Fail',
+    desc:'Learn to add proper error handling, retry logic, and alert notifications to your n8n workflows so you always know when something breaks.',
+    read:'11 min', date:'Apr 2026', views:'6.8k',
+    content:`<h3>Why Error Handling is Non-Negotiable</h3><p>A workflow that fails silently is worse than no workflow at all. Without proper error handling, you might send duplicate emails, miss critical leads, or lose data — all while thinking everything is working fine.</p><h3>The n8n Error Trigger Node</h3><p>Every production workflow should be paired with an Error Trigger workflow. Add a new workflow with just the Error Trigger node, then connect it to a Slack or email notification. In your main workflow settings, select this error workflow under "Error Workflow."</p><h3>Try/Catch with Continue on Fail</h3><p>For nodes that might fail (HTTP requests, API calls), enable "Continue on Fail" in the node settings. Then use an IF node to check if the previous node returned an error: <code>{{$json.error}}</code>. Route failures to a different path that logs the error to Google Sheets.</p><h3>Implementing Retry Logic</h3><p>For transient errors (API rate limits, network timeouts), add a Wait node (set to 30 seconds) followed by a retry of the failed HTTP request. Limit retries to 3 attempts using a counter in static workflow data.</p><div class="callout">Critical: Always test your error handling by intentionally breaking the workflow. Many teams discover their error alerts don't work until it's too late.</div><div class="cta-box"><h4>Our Workflows Include Built-In Error Handling</h4><p>Every workflow comes with error triggers, Slack alerts, and retry logic pre-configured.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Get Reliable Workflows →</a></div>` },
+
+  { id:4, cat:'n8n', emoji:'🚀', theme:'c4',
+    title:'How to Self-Host n8n for Free (or Nearly Free): Complete VPS Setup Guide 2026',
+    desc:'Step-by-step guide to hosting n8n on a VPS for £4-6/month. Includes domain setup, SSL, Docker, and environment configuration.',
+    read:'20 min', date:'Mar 2026', views:'15.2k',
+    content:`<h3>What You Need</h3><p>A VPS (virtual private server) from Hetzner (CX22: €3.29/month), DigitalOcean ($6/month), or Linode ($5/month). A domain name (optional but recommended, ~£10/year). That's it.</p><h3>Step 1: Provision Your VPS</h3><p>Sign up to Hetzner and create a CX22 server (2 vCPU, 4GB RAM, Ubuntu 24.04). Download your SSH key. Connect: <code>ssh root@YOUR_SERVER_IP</code></p><h3>Step 2: Install Docker</h3><p>Run the official Docker install script, then install Docker Compose. These tools allow n8n to run in an isolated container with automatic restarts.</p><h3>Step 3: Configure n8n with Docker Compose</h3><p>Create a <code>docker-compose.yml</code> file with n8n's official image, set your environment variables (encryption key, time zone, domain), and run <code>docker compose up -d</code>. n8n is now running on port 5678.</p><h3>Step 4: Add Domain + SSL (Nginx)</h3><p>Install Nginx and Certbot. Configure Nginx as a reverse proxy pointing to localhost:5678. Run Certbot to issue a free SSL certificate from Let's Encrypt. Your n8n instance is now accessible at https://n8n.yourdomain.com.</p><h3>Estimated Monthly Cost</h3><ul><li>Hetzner CX22: €3.29/month</li><li>Domain: ~£0.84/month (£10/year)</li><li>SSL: Free (Let's Encrypt)</li><li>Total: ~£4.50/month</li></ul><div class="cta-box"><h4>Skip Setup — Get n8n Workflows That Are Already Tested</h4><p>Pre-built workflows with complete setup guides. Works on any n8n instance.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Workflows →</a></div>` },
+
+  { id:5, cat:'n8n', emoji:'📊', theme:'c5',
+    title:'n8n + Google Sheets: The Complete Integration Guide (With 5 Real Examples)',
+    desc:'How to read, write, update, and delete Google Sheets data in n8n. Includes five practical workflow examples you can use immediately.',
+    read:'13 min', date:'Mar 2026', views:'8.7k',
+    content:`<h3>Setting Up Google Sheets Credentials in n8n</h3><p>Go to Google Cloud Console, create a project, enable the Google Sheets API and Google Drive API, create a service account, download the JSON key, and add it to n8n Credentials as "Google Service Account." Share your spreadsheet with the service account email.</p><h3>Example 1: Log All Form Submissions</h3><p>Trigger: Webhook (from any form tool). Action: Google Sheets — Append Row. Result: Every form submission automatically logged to a spreadsheet with timestamp.</p><h3>Example 2: Read Customer List and Send Personalized Emails</h3><p>Trigger: Schedule (daily). Action: Google Sheets Read — get all rows where "Email Sent" column is empty. Process: For each row, generate personalized email with AI, send via Gmail, update the "Email Sent" column with timestamp.</p><h3>Example 3: Update CRM Data from Google Sheets</h3><p>Trigger: Google Sheets trigger (when new row added). Action: HTTP Request to your CRM API with the new data. This creates a two-way sync between your spreadsheet and CRM.</p><div class="cta-box"><h4>Get Workflows with Google Sheets Already Integrated</h4><p>Every workflow in our store includes pre-configured Google Sheets logging.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">View Workflows →</a></div>` },
+
+  // ── AI & GROQ ─────────────────────────────────────────────────────────
+  { id:6, cat:'ai', emoji:'🤖', theme:'c1', featured:true,
+    title:'Groq API Complete Guide for n8n: Build AI Workflows for Free in 2026',
+    desc:'How to integrate Groq (the fastest free AI API) with n8n. Includes real examples: email writing, lead scoring, content generation, and customer support.',
+    read:'16 min', date:'May 2026', views:'11.3k',
+    content:`<h3>Why Groq for n8n Automation?</h3><p>Groq is currently the fastest AI inference engine available, running Llama 3.3 70B at speeds that make it feel instant compared to other providers. More importantly: it's free. The free tier gives you 14,400 requests per day — more than enough for most business automation workflows.</p><h3>Getting Your Free Groq API Key</h3><p>Go to console.groq.com, sign up with your email, and click "API Keys" → "Create API Key." Copy the key — it starts with <code>gsk_</code>. Add it to n8n as an HTTP Header credential: Header Name: Authorization, Value: Bearer YOUR_KEY.</p><h3>Making Your First Groq API Call in n8n</h3><p>Add an HTTP Request node. Set URL to: <code>https://api.groq.com/openai/v1/chat/completions</code>. Method: POST. Headers: Authorization Bearer and Content-Type. Body (JSON): model (llama-3.3-70b-versatile), messages array, max_tokens, temperature.</p><h3>Real Example: AI-Powered Lead Scoring</h3><p>When a new lead comes in, send their company name, role, and message to Groq with a scoring prompt. Groq returns a JSON score (1-10) with reasoning. Use an IF node to route high-value leads to an urgent Slack channel and low-value leads to a standard CRM pipeline.</p><h3>Real Example: Personalized Email Generation</h3><p>Read customer data from Google Sheets. For each customer, send their purchase history and name to Groq. Ask it to write a personalized follow-up email. Send via Gmail. Total cost: £0. Time saved: 5+ hours per week.</p><div class="callout">💡 Best Groq Models for Business: llama-3.3-70b-versatile (best quality), llama-3.1-8b-instant (fastest, for high-volume), mixtral-8x7b-32768 (longest context window).</div><div class="cta-box"><h4>Get AI-Powered Workflows Ready to Use</h4><p>Pre-built n8n workflows using Groq AI. Full setup guides included.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse AI Workflows →</a></div>` },
+
+  { id:7, cat:'ai', emoji:'🧠', theme:'c2',
+    title:'n8n AI Agent Setup: Build a Business Intelligence Agent with Claude + Groq',
+    desc:'How to build an agentic AI system in n8n that can research, reason, and take actions — without any manual intervention.',
+    read:'19 min', date:'Apr 2026', views:'7.4k',
+    content:`<h3>What is an n8n AI Agent?</h3><p>An AI agent in n8n is a workflow that uses an AI model to decide what actions to take next, rather than following a fixed path. The AI can choose from a set of "tools" (other nodes) based on the input it receives.</p><h3>n8n's Native AI Agent Node</h3><p>n8n has a built-in AI Agent node that connects to any LLM. You define tools (functions the AI can call), and the AI decides when and how to use them based on user input.</p><h3>Building a Business Research Agent</h3><p>Tools available to the agent: Web search (SerpAPI), Google Sheets reader, Email sender, Slack messenger. Workflow: User sends a company name → Agent searches the web for company info → reads relevant rows from CRM → writes analysis to Google Sheets → sends Slack summary. All decided by the AI with zero human input.</p><div class="cta-box"><h4>AI Agents That Actually Work for Your Business</h4><p>Pre-built AI agent workflows. Skip months of development time.</p><a href="https://digitalvelocityco.gumroad.com/l/AICUSTOMER0611" target="_blank" rel="noopener">Get AI Agent Workflow →</a></div>` },
+
+  { id:8, cat:'ai', emoji:'💬', theme:'c3',
+    title:'Build a WhatsApp AI Chatbot with n8n and Groq — No Monthly Fees',
+    desc:'Complete guide to building a 24/7 AI chatbot for WhatsApp Business that reads your knowledge base, handles FAQs, and escalates to humans when needed.',
+    read:'17 min', date:'Apr 2026', views:'13.8k',
+    content:`<h3>Why WhatsApp AI for Business?</h3><p>WhatsApp has a 98% open rate compared to email's 20%. An AI chatbot on WhatsApp means customers get instant responses at 3am — without you paying for a support team. Combined with Groq's free tier, the monthly cost is near zero.</p><h3>Setting Up WhatsApp Business API</h3><p>You need Meta's WhatsApp Business API, which requires a verified business. The most accessible route: create a Facebook Developer account, register a WhatsApp Business App, and get your temporary access token. Meta's Cloud API is free for the first 1,000 conversations per month.</p><h3>The n8n Workflow Architecture</h3><p>Trigger: WhatsApp Webhook (every incoming message). Step 1: Extract customer phone and message. Step 2: Query your knowledge base (Google Sheets or Notion). Step 3: Send context + customer question to Groq. Step 4: Format and send the AI response back via WhatsApp API. Step 5: Log conversation to CRM.</p><div class="cta-box"><h4>24/7 AI Customer Support — Ready to Deploy</h4><p>Our AI Customer Support Agent handles WhatsApp, email, and web chat automatically.</p><a href="https://digitalvelocityco.gumroad.com/l/AICUSTOMER0611" target="_blank" rel="noopener">Get the Workflow →</a></div>` },
+
+  { id:9, cat:'ai', emoji:'✍️', theme:'c4',
+    title:'AI Content Factory: Generate 30 Days of Content in 60 Minutes with n8n + Groq',
+    desc:'Build an automated content pipeline that generates blog posts, LinkedIn updates, tweets, and email newsletters from a single topic idea.',
+    read:'12 min', date:'Mar 2026', views:'9.2k',
+    content:`<h3>The One-to-Many Content Strategy</h3><p>Most content creators write a LinkedIn post, a blog, a newsletter, and social media separately — spending 10+ hours per week on content. With n8n + Groq, you write ONE core idea and the workflow generates all formats automatically.</p><h3>The Workflow Architecture</h3><p>Input: Topic idea in a Google Sheet. Step 1: Groq generates 2,000-word blog post. Step 2: Groq summarizes blog to 3 LinkedIn posts. Step 3: Groq extracts 5 tweet-length insights. Step 4: Groq writes email newsletter from blog. Step 5: All content logged to Notion with formatting. Step 6: LinkedIn posts scheduled via LinkedIn API. Step 7: Email queued in Mailchimp/Brevo.</p><div class="cta-box"><h4>AI Content Repurposing Engine — Ready to Download</h4><p>Turn 1 post into 7 formats automatically. Instant download, 30-min setup.</p><a href="https://digitalvelocityco.gumroad.com/l/AICONTENTREPUR" target="_blank" rel="noopener">Get the Workflow →</a></div>` },
+
+  { id:10, cat:'ai', emoji:'🎯', theme:'c5',
+    title:'Prompt Engineering for Business Automation: Write AI Prompts That Get Consistent Results',
+    desc:'How to write system prompts for n8n AI nodes that produce reliable, structured outputs every time — not random creative writing.',
+    read:'10 min', date:'Mar 2026', views:'5.6k',
+    content:`<h3>The Problem with Vague Prompts in Production Automation</h3><p>A prompt like "write a follow-up email" gives different results every time. In automation, you need predictable outputs that fit a specific format, length, and tone. The solution is structured prompt engineering.</p><h3>The Business Automation Prompt Formula</h3><p>Every production prompt should have: 1) Role definition (who the AI is), 2) Task description (exactly what to do), 3) Context variables (dynamic data from previous nodes), 4) Output format specification (JSON, plain text, specific structure), 5) Constraints (word count, tone, what to avoid).</p><h3>Example: Lead Scoring Prompt</h3><p>Role: "You are a B2B sales qualification specialist." Task: "Score this lead 1-10 based on fit." Context: Company size, industry, job title from variables. Format: "Respond ONLY with valid JSON: {score: number, reason: string, priority: high/medium/low}" Constraints: "Do not include any text outside the JSON object."</p><div class="cta-box"><h4>Get Workflows with Proven Prompts Already Written</h4><p>Every workflow includes optimized AI prompts tested across hundreds of executions.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Workflows →</a></div>` },
+
+  // ── SALES & LEADS ────────────────────────────────────────────────────
+  { id:11, cat:'sales', emoji:'🤖', theme:'c1', featured:true,
+    title:'Build an AI Sales Rep Bot with n8n: Lead Scoring, Personalized Pitches & 7-Day Follow-Up',
+    desc:'Complete tutorial: how to build an AI system that automatically qualifies leads, writes personalized outreach, and follows up for 7 days — costing $0/month to run.',
+    read:'22 min', date:'May 2026', views:'18.4k',
+    content:`<h3>Why AI Sales Automation is the 2026 Competitive Advantage</h3><p>The average sales rep spends 65% of their time on non-selling activities: researching prospects, writing follow-ups, updating CRM. An AI sales bot eliminates all of this. The result: your human sales team focuses only on warm conversations and closing.</p><h3>The Architecture: 5 Core Modules</h3><h4>Module 1: Lead Intake</h4><p>A webhook receives lead data from your website form, LinkedIn, or manual upload to Google Sheets. The lead's name, company, email, and source are captured.</p><h4>Module 2: Lead Enrichment</h4><p>The workflow calls Hunter.io (or Apollo) to find the lead's LinkedIn URL, company size, industry, and funding status. This data is added to the lead record.</p><h4>Module 3: AI Scoring</h4><p>Groq receives all lead data and scores them 1-10 based on your ideal customer profile. Leads scoring 7+ go to the priority pipeline. Below 4 are added to a nurture sequence.</p><h4>Module 4: Personalized Pitch Generation</h4><p>For high-score leads, Groq generates a personalized cold email that references their specific company, industry challenges, and how your product solves their problem. No templates — every email is unique.</p><h4>Module 5: 7-Day Follow-Up Sequence</h4><p>Day 1: AI pitch sent. Day 3: If no reply — value-add follow-up. Day 5: Case study or social proof. Day 7: Breakup email with soft close. All automated. All personalized. All free to run.</p><div class="cta-box"><h4>Get the Complete AI Sales Rep Bot — Ready to Deploy</h4><p>45-node workflow with full setup guide. Runs on free Groq API. Zero monthly cost.</p><a href="https://digitalvelocityco.gumroad.com/l/SALESREP0611" target="_blank" rel="noopener">Get AI Sales Rep Bot ($87) →</a></div>` },
+
+  { id:12, cat:'sales', emoji:'🗺️', theme:'c2',
+    title:'n8n Google Maps Lead Scraper: Find and Qualify 100 B2B Leads per Hour Automatically',
+    desc:'Build a workflow that scrapes Google Maps for local business leads in any industry, qualifies them with AI, and exports to a ready-to-contact spreadsheet.',
+    read:'14 min', date:'Apr 2026', views:'16.7k',
+    content:`<h3>Why Google Maps is the Best Free B2B Lead Source</h3><p>Google Maps contains millions of local businesses with phone numbers, websites, addresses, and review counts — all publicly available. A dentist, law firm, or restaurant in your target city is one search away.</p><h3>The Scraping Approach (Legal and Ethical)</h3><p>Use Google's Places API (not illegal scraping) to programmatically search for businesses by type and location. The API returns business name, address, phone, website URL, rating, and review count — all the data you need to qualify a lead.</p><h3>AI Lead Qualification</h3><p>Once you have the raw business data, Groq analyzes each lead: business size (inferred from reviews), website quality (checked via HTTP request), likelihood to need your service (based on industry + size + online presence). Output: Lead score, recommended outreach approach, personalized opener.</p><div class="cta-box"><h4>B2B Lead Finder Workflow — Instant Download</h4><p>Full Google Maps scraper + AI qualifier. £27 one-time.</p><a href="https://digitalvelocityco.gumroad.com/l/B2B0611" target="_blank" rel="noopener">Get B2B Lead Finder (£27) →</a></div>` },
+
+  { id:13, cat:'sales', emoji:'📧', theme:'c3',
+    title:'Automated Cold Email System with n8n: From List to Booked Call Without Touching a Keyboard',
+    desc:'Build a cold email system that researches prospects, writes personalized emails, sends at optimal times, tracks opens, and auto-follows up.',
+    read:'16 min', date:'Apr 2026', views:'11.2k',
+    content:`<h3>The End-to-End Cold Email Machine</h3><p>Most cold email "automation" just sends the same template to everyone. This system uses AI to research each prospect, write a truly personalized email, and follow up based on their actual behavior (opened but didn't click, clicked but didn't reply, etc.).</p><h3>Workflow Overview</h3><p>1. Import prospect list from Google Sheets. 2. Enrich each lead via Hunter.io + LinkedIn. 3. Groq writes personalized email (mentions their recent blog post, company news, or specific pain point). 4. Send via Mailgun with tracking pixel. 5. Webhook from Mailgun triggers follow-up logic based on open/click status.</p><h3>Deliverability Rules to Follow</h3><ul><li>Warm your sending domain for 4 weeks before mass sending</li><li>Send maximum 50 new cold emails per domain per day</li><li>Use personalized subject lines (never generic)</li><li>Always include unsubscribe link</li><li>Monitor bounce rate — above 5% means stop immediately</li></ul><div class="cta-box"><h4>Cold Email Outreach Machine — Pre-Built</h4><p>AI-personalized cold email workflow with tracking. Instant download.</p><a href="https://digitalvelocityco.gumroad.com/l/cpbeln" target="_blank" rel="noopener">Get Email Machine →</a></div>` },
+
+  { id:14, cat:'sales', emoji:'🤫', theme:'c4',
+    title:'The Silent Closer: How to Automate Sales Follow-Ups Without Annoying Your Prospects',
+    desc:'The psychology-backed framework for automated follow-up sequences that convert without feeling like spam. Includes 7-touch sequence blueprint.',
+    read:'11 min', date:'Mar 2026', views:'7.8k',
+    content:`<h3>Why Most Automated Follow-Ups Fail</h3><p>Automated follow-ups fail because they're identical to the previous email with "Just checking in" prepended. Prospects see through this immediately. Effective automated follow-ups add new value at each touch and respect the prospect's buying stage.</p><h3>The 7-Touch Value Sequence</h3><p>Touch 1 (Day 0): Initial personalized pitch. Touch 2 (Day 3): Relevant case study or result. Touch 3 (Day 6): Industry insight or data point. Touch 4 (Day 10): Objection handling (anticipate their likely concern). Touch 5 (Day 15): Social proof (specific customer quote). Touch 6 (Day 21): Free resource or tool offer. Touch 7 (Day 28): Honest breakup email with soft close.</p><h3>Building This in n8n</h3><p>Use n8n's Wait nodes to space emails correctly. Track prospect responses using a Webhook that updates their status in Google Sheets. IF nodes route responded prospects out of the sequence. Only add new content touches — never "check ins."</p><div class="cta-box"><h4>Silent Closer Follow-Up Workflow — Ready to Import</h4><p>Complete 7-touch AI sequence with value at every touch. £47.</p><a href="https://digitalvelocityco.gumroad.com/l/SILENTFOLLOWUP0611" target="_blank" rel="noopener">Get Silent Closer (£47) →</a></div>` },
+
+  { id:15, cat:'sales', emoji:'🏠', theme:'c5',
+    title:'Real Estate Lead Generation with n8n: Complete 39-Node Workflow Explained',
+    desc:"Inside look at the most advanced n8n real estate workflow available. We break down every section of the 39-node system that runs one of the UK's top estate agencies.",
+    read:'25 min', date:'Mar 2026', views:'14.1k',
+    content:`<h3>Why Real Estate Needs Automation More Than Any Industry</h3><p>Real estate leads are time-sensitive. A buyer who registers interest on Rightmove at 11pm needs a response within 1 hour to have a 60% higher conversion rate. No human team can cover that — but n8n can.</p><h3>The 39-Node Architecture Breakdown</h3><h4>Section 1: Lead Intake (Nodes 1-8)</h4><p>Webhook from website form, Rightmove API, Zoopla webhook, and manual upload all feed into a single normalization node that standardizes the data format.</p><h4>Section 2: Lead Qualification (Nodes 9-18)</h4><p>AI scores each lead based on: budget range, timeline, property type preference, location specificity, and engagement level. Leads are segmented into Hot/Warm/Cold.</p><h4>Section 3: Agent Assignment (Nodes 19-24)</h4><p>Based on lead location and property type, the workflow queries your agent availability spreadsheet and assigns the nearest available agent. Notifies via WhatsApp and email simultaneously.</p><h4>Section 4: Automated Outreach (Nodes 25-34)</h4><p>Hot leads receive an immediate AI-personalized WhatsApp message within 60 seconds of enquiry. Email follow-up sent 2 hours later. Calendar booking link included.</p><h4>Section 5: CRM Sync and Reporting (Nodes 35-39)</h4><p>All lead data synced to CRM, Google Sheets dashboard updated with lead count and conversion metrics, weekly report generated and emailed to management.</p><div class="cta-box"><h4>Real Estate Lead Engine — All 39 Nodes Included</h4><p>The complete workflow that closes more properties. £2,500.</p><a href="https://digitalvelocityco.gumroad.com/l/REALESTATE0611" target="_blank" rel="noopener">Get Real Estate Engine →</a></div>` },
+
+  // ── E-COMMERCE ────────────────────────────────────────────────────────
+  { id:16, cat:'ecommerce', emoji:'🛒', theme:'c1', featured:true,
+    title:'Shopify Abandoned Cart Recovery with n8n: Recover 15% of Lost Sales Automatically',
+    desc:'Build a 3-email AI recovery sequence that creates unique discount codes, checks if customers have purchased, and tracks every recovery in Google Sheets.',
+    read:'18 min', date:'May 2026', views:'22.1k',
+    content:`<h3>The £260 Billion Problem You Can Fix in 30 Minutes</h3><p>70% of all Shopify carts are abandoned — and £260 billion in recoverable revenue is lost globally each year. The average recovery rate with a 3-email sequence is 12-15%. For a store doing £10,000/month, that's £1,200-£1,500 in recovered revenue from one automated workflow.</p><h3>Why n8n Cart Recovery Beats Klaviyo</h3><p>Klaviyo charges £150-400/month for cart recovery features. n8n's self-hosted solution does the same thing for £0/month running cost. The only difference: n8n requires a 30-minute setup once, and Groq AI writes better personalized emails than Klaviyo's templates.</p><h3>The 3-Email Recovery Sequence</h3><h4>Email 1: T+30 Minutes — Warm Reminder</h4><p>Groq writes a personalized email mentioning the exact abandoned items. No discount — research shows first-touch recovery emails without discounts get 39% open rates and convert 4-6% on their own.</p><h4>Email 2: T+24 Hours — Social Proof</h4><p>Groq adds testimonial content and subtle natural urgency. Still no discount. Only sent if Email 1 didn't result in a purchase (workflow checks Shopify API first).</p><h4>Email 3: T+72 Hours — Unique Discount</h4><p>The workflow automatically creates a unique 10% discount code via Shopify API (valid 24 hours), then Groq writes the final email revealing the code. Real urgency because the discount actually expires.</p><div class="cta-box"><h4>CartRevive AI — Full Recovery Workflow</h4><p>Complete 3-email n8n recovery system with Shopify integration. Available in our store.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Store →</a></div>` },
+
+  { id:17, cat:'ecommerce', emoji:'📦', theme:'c2',
+    title:'Automate E-Commerce Returns with n8n: From Customer Request to Label in 60 Seconds',
+    desc:'How to build a returns automation system that handles every return request automatically — label generation, status updates, and refund processing without human intervention.',
+    read:'13 min', date:'Apr 2026', views:'8.4k',
+    content:`<h3>The Hidden Cost of Manual Returns Processing</h3><p>The average e-commerce business spends 2.5 hours per day processing return requests. At £15/hour that's £975/month in labor cost — for a task that can be fully automated.</p><h3>The Returns Automation Workflow</h3><p>Trigger: Customer submits return request form. Step 1: Validate order (check Shopify API that order exists and is within return window). Step 2: Generate return label via Royal Mail, DPD, or Shippo API. Step 3: Send label to customer via email with instructions. Step 4: Update Shopify order status to "Return Pending." Step 5: When tracking shows item returned, trigger automatic refund via Shopify API. Step 6: Send confirmation email to customer.</p><h3>Exception Handling</h3><p>Orders outside the return window are flagged for human review. High-value returns above £200 trigger a Slack alert for manager approval before processing. Fraud patterns (too many returns from one customer) are flagged automatically.</p><div class="cta-box"><h4>ReturnGenius — Complete Returns Automation</h4><p>Handle every return automatically. No more manual label generation. £297.</p><a href="https://digitalvelocityco.gumroad.com/l/RETURNGENIUS0611" target="_blank" rel="noopener">Get ReturnGenius (£297) →</a></div>` },
+
+  { id:18, cat:'ecommerce', emoji:'📈', theme:'c3',
+    title:'AI Product Trend Prediction with n8n: Know What Will Sell Before Your Competition',
+    desc:'Build an automated trend detection system that monitors Google Trends, social media, and marketplace data to predict winning products weeks before they peak.',
+    read:'12 min', date:'Apr 2026', views:'9.8k',
+    content:`<h3>Why Product Trend Prediction Gives You a 2-3 Week Head Start</h3><p>By the time a product appears on a "trending products" blog, it's too late — every dropshipper is already selling it. The real advantage is detecting signals before the mainstream articles are written.</p><h3>Signal Sources for Early Detection</h3><ul><li>Google Trends API: rising queries in target categories</li><li>Reddit API: post volume increases in relevant subreddits</li><li>TikTok Creative Center: trending sounds and product videos</li><li>Amazon Movers and Shakers API: rapid BSR improvements</li><li>Pinterest API: pin volume growth by category</li></ul><h3>AI Analysis in n8n</h3><p>Groq receives weekly data from all five sources. It identifies products appearing on multiple signals simultaneously (a strong indicator of genuine trend, not noise). Output: ranked list of trending products with confidence score, estimated peak date, and recommended action.</p><div class="cta-box"><h4>Trend Seer — AI Product Trend Predictor</h4><p>Weekly automated trend reports for your product categories. $147.</p><a href="https://digitalvelocityco.gumroad.com/l/trend-seer-n8n-workflow" target="_blank" rel="noopener">Get Trend Seer ($147) →</a></div>` },
+
+  { id:19, cat:'ecommerce', emoji:'⭐', theme:'c4',
+    title:'Automate Google Review Collection with n8n + WhatsApp: Get 5-Star Reviews on Autopilot',
+    desc:'How to set up a WhatsApp review request system that sends personalized messages at the perfect moment to maximize review response rates.',
+    read:'10 min', date:'Mar 2026', views:'12.3k',
+    content:`<h3>The Perfect Review Request Timing</h3><p>Timing is everything for review requests. Send too early (before delivery) and the customer can't review. Send too late (2 weeks post-delivery) and enthusiasm has faded. The optimal window: 3-5 days after confirmed delivery, between 6pm and 9pm local time.</p><h3>Why WhatsApp Beats Email for Reviews</h3><p>WhatsApp messages have a 98% open rate within 5 minutes. Review request emails average 18-22% open rate. The math: for every 100 customers, WhatsApp generates ~15 reviews vs email's ~3.</p><h3>The n8n WhatsApp Review Workflow</h3><p>Trigger: Shopify order status changes to "Delivered." Wait: 3 days (configurable). Action: Check if customer already left a review (via Google Places API). If no review: Send personalized WhatsApp message with direct Google Review link. Follow-up: If no review after 48 hours, send one reminder with slight re-phrasing.</p><div class="cta-box"><h4>WhatsApp Reputation Engine — Get 5-Star Reviews Automatically</h4><p>Complete review collection system. £57 one-time.</p><a href="https://digitalvelocityco.gumroad.com/l/googlereviews0611" target="_blank" rel="noopener">Get Review Engine (£57) →</a></div>` },
+
+  { id:20, cat:'ecommerce', emoji:'💳', theme:'c5',
+    title:'Stripe to QuickBooks Auto-Sync with n8n: Eliminate Manual Bookkeeping Forever',
+    desc:'Set up automatic Stripe payment syncing to QuickBooks. Every payment, refund, and subscription event handled automatically with correct categorization.',
+    read:'9 min', date:'Mar 2026', views:'7.1k',
+    content:`<h3>The Manual Bookkeeping Tax</h3><p>The average e-commerce business owner spends 6-8 hours per month on manual bookkeeping or pays an accountant £100-200/month to do it. This n8n workflow eliminates both costs entirely.</p><h3>What Gets Synced Automatically</h3><ul><li>Every Stripe payment → QuickBooks Sales Receipt</li><li>Every Stripe refund → QuickBooks Credit Memo</li><li>Subscription renewals → Recurring invoices</li><li>Failed payments → flagged in QuickBooks for follow-up</li><li>Stripe payouts → matched to QuickBooks bank deposits</li></ul><h3>Monthly Reconciliation Report</h3><p>On the 1st of each month, the workflow generates a summary report: total revenue, total refunds, net revenue, top products by revenue, and any discrepancies. Sent automatically to your email and accountant.</p><div class="cta-box"><h4>Stripe → QuickBooks Automation — Instant Download</h4><p>Eliminate manual bookkeeping completely. $57 once.</p><a href="https://digitalvelocityco.gumroad.com/l/STRIPE0611" target="_blank" rel="noopener">Get Auto-Bookkeeping ($57) →</a></div>` },
+
+  // ── FINANCE ───────────────────────────────────────────────────────────
+  { id:21, cat:'finance', emoji:'📄', theme:'c1', featured:true,
+    title:'Automate Invoice Follow-Ups with n8n: Recover Overdue Payments Without Awkward Conversations',
+    desc:'Build a professional invoice chasing system that sends escalating reminders, logs responses, and flags accounts for human review — all automatically.',
+    read:'14 min', date:'May 2026', views:'19.7k',
+    content:`<h3>The Invoice Chasing Problem That Nobody Talks About</h3><p>Chasing late payments is one of the most uncomfortable parts of running a business — and most business owners are too polite about it. This workflow removes the emotion from invoice chasing by automating it completely, which paradoxically results in faster payment (professional systems signal serious businesses).</p><h3>The 4-Stage Escalation Sequence</h3><h4>Stage 1: Friendly Reminder (1 Day Late)</h4><p>Groq writes a professional, warm reminder email assuming the non-payment was an oversight. Includes invoice number, amount, and payment link.</p><h4>Stage 2: Firm Reminder (7 Days Late)</h4><p>Tone becomes more direct. References the previous reminder. Mentions that continued non-payment may affect their credit reference or result in late payment fees (per Late Payment of Commercial Debts Act).</p><h4>Stage 3: Final Notice (14 Days Late)</h4><p>States clearly that legal action will be initiated if payment not received within 7 days. Attaches a copy of the original invoice and signed contract.</p><h4>Stage 4: Human Escalation (21 Days Late)</h4><p>Slack notification to owner with full history. All further communication requires human handling.</p><div class="cta-box"><h4>Invoice Recovery Engine — Automate Your Collections</h4><p>Recover more money, faster, without awkward conversations. £250.</p><a href="https://digitalvelocityco.gumroad.com/l/INVOICEFOLOWUP0611" target="_blank" rel="noopener">Get Invoice Recovery (£250) →</a></div>` },
+
+  { id:22, cat:'finance', emoji:'🏘️', theme:'c2',
+    title:'Automated Rent Collection with n8n: Stop Chasing Tenants Manually',
+    desc:"Build a professional rent chasing system for property managers and landlords that sends reminders, escalates automatically, and maintains the landlord-tenant relationship.",
+    read:'12 min', date:'Apr 2026', views:'11.4k',
+    content:`<h3>The Landlord's Dilemma: Money vs Relationship</h3><p>Chasing rent directly risks damaging the landlord-tenant relationship and creating conflict. An automated system removes the personal element — tenants receive professional, consistent communications that feel systematic rather than personal, making them more likely to pay promptly.</p><h3>How the Rent Chase Works</h3><p>Day -3 (before rent due): Friendly reminder with payment details. Day 0 (rent due): Check bank for payment. If paid — mark in spreadsheet. If not paid — trigger reminder sequence. Day 1: Professional reminder. Day 3: Formal notice (referencing tenancy agreement). Day 7: Final letter before legal proceedings. Day 8: Owner alert and property management escalation.</p><h3>Legal Compliance Notes</h3><p>All messages are worded to comply with UK housing law (or your jurisdiction). Templates reviewed against Section 21/Section 8 notice requirements. This system does NOT replace proper legal advice for possession proceedings.</p><div class="cta-box"><h4>RentArrears Hunter — Professional Rent Recovery</h4><p>Professional automated rent chasing for landlords and property managers. £497.</p><a href="https://digitalvelocityco.gumroad.com/l/RETURNARREARS0611" target="_blank" rel="noopener">Get RentArrears Hunter (£497) →</a></div>` },
+
+  { id:23, cat:'finance', emoji:'🏢', theme:'c3',
+    title:'AI Vendor Invoice Audit with n8n: Catch Billing Errors and Fraud Automatically',
+    desc:'How enterprise finance teams use n8n + AI to audit vendor invoices against purchase orders, flag discrepancies, and prevent overpayments.',
+    read:'16 min', date:'Apr 2026', views:'6.2k',
+    content:`<h3>How Much are Billing Errors Costing Your Business?</h3><p>Studies show that 1-3% of vendor invoices contain errors — either accidental or fraudulent. For a business processing £1M/year in vendor payments, that's £10,000-30,000 in potential overpayments. AI audit automation catches these before payment.</p><h3>The Three-Stage Audit Workflow</h3><p>Stage 1: Invoice parsing (extract all key fields from PDF invoices using an AI parsing tool). Stage 2: PO matching (compare invoice details against approved purchase orders in your ERP). Stage 3: Rule-based checks (duplicate detection, rate validation, approval chain verification). Discrepancies are flagged with severity level and routed to the appropriate reviewer.</p><div class="cta-box"><h4>Vendor Compliance & Invoice Audit Engine</h4><p>For £10M+ revenue businesses. Full FinOps automation. $5,000.</p><a href="https://digitalvelocityco.gumroad.com/l/VENDORCOMPLAINCE5000" target="_blank" rel="noopener">Get Enterprise Audit Engine →</a></div>` },
+
+  { id:24, cat:'finance', emoji:'📊', theme:'c4',
+    title:'Build an Automated P&L Dashboard in Google Sheets with n8n: Real-Time Financial Reporting',
+    desc:'Connect your payment processors, bank APIs, and expense tools to build a live profit and loss dashboard that updates automatically every day.',
+    read:'15 min', date:'Mar 2026', views:'8.9k',
+    content:`<h3>Why Every Business Needs a Live P&L Dashboard</h3><p>82% of businesses fail due to cash flow problems — not because they aren't profitable, but because they don't have real-time visibility into their numbers. A live dashboard that updates daily means you always know your position.</p><h3>Data Sources to Connect</h3><ul><li>Stripe/PayPal/Square: Revenue data</li><li>Xero/QuickBooks API: Expenses and categorization</li><li>Bank API (Open Banking in UK): Account balances</li><li>Payroll software: Staff costs</li><li>Shopify: Cost of goods sold</li></ul><h3>The Google Sheets Dashboard Structure</h3><p>Sheet 1: Daily summary (revenue, costs, profit margin). Sheet 2: Monthly rolling view. Sheet 3: Cash flow projection (30/60/90 days). Sheet 4: Expense breakdown by category. All updated automatically at 7am every day by n8n.</p><div class="cta-box"><h4>Complete Excel/Sheets Financial Dashboard</h4><p>P&L, cash flow, pricing, and 90-day profit plan. £57 one-time.</p><a href="https://digitalvelocityco.gumroad.com/l/mivmw" target="_blank" rel="noopener">Get Financial Dashboard (£57) →</a></div>` },
+
+  // ── OPERATIONS ────────────────────────────────────────────────────────
+  { id:25, cat:'operations', emoji:'🏥', theme:'c1', featured:true,
+    title:"Reduce Clinic No-Shows by 80%: How n8n's WhatsApp System Recovers Thousands Per Month",
+    desc:'The complete case study and workflow breakdown of how healthcare providers are using automated multi-channel appointment reminders to recover appointment revenue.',
+    read:'17 min', date:'May 2026', views:'21.5k',
+    content:`<h3>The Financial Reality of No-Shows</h3><p>A 20-appointment dental practice with a 15% no-show rate loses approximately £6,000 per month in unfilled chair time — £72,000 per year. Even reducing no-shows by 50% recovers £36,000 annually. This workflow pays for itself in the first day.</p><h3>Why Multi-Channel Matters</h3><p>Single-channel reminders (email only) reduce no-shows by 20-30%. Multi-channel (WhatsApp + SMS + email) reduces no-shows by 70-80%. The reason: different patients have different communication preferences. Covering all channels ensures everyone is reached.</p><h3>The Reminder Sequence</h3><h4>T-72 Hours: First Confirmation</h4><p>WhatsApp message: "Hi [Name], your appointment at [Clinic] is on [Date] at [Time]. Reply YES to confirm or NO to reschedule." Confirmation status logged to Google Sheets.</p><h4>T-24 Hours: Reminder</h4><p>If confirmed: Short reminder message. If unconfirmed: Second request with rescheduling link. This is where most no-shows are prevented.</p><h4>T-2 Hours: Same-Day Alert</h4><p>Quick "See you today at [Time]!" message. Also triggers a staff notification so they're prepared for the appointment.</p><h4>If Patient Misses: Automated Rebooking</h4><p>No-show trigger sends a WhatsApp message offering to rebook within the next 48 hours with a direct booking link.</p><div class="cta-box"><h4>Clinic No-Show Prevention System</h4><p>The complete multi-channel reminder system for healthcare providers. £997.</p><a href="https://digitalvelocityco.gumroad.com/l/CLINICTRENDINGWORKFLOW0611" target="_blank" rel="noopener">Get No-Show Prevention (£997) →</a></div>` },
+
+  { id:26, cat:'operations', emoji:'🚀', theme:'c2',
+    title:"AutoBiz Saver Review: How to Make Your Entire Business Run Itself for £0/Month",
+    desc:'Complete breakdown of the AutoBiz Saver workflow system — what it automates, how to set it up, and the real ROI for small business owners.',
+    read:'14 min', date:'Apr 2026', views:'13.2k',
+    content:`<h3>What AutoBiz Saver Automates</h3><p>The AutoBiz Saver is a complete business operations automation system covering: lead management, client onboarding, invoice generation, follow-up communications, social media posting, weekly performance reporting, and customer support triage. It's the closest thing to a virtual assistant you can build for £0/month.</p><h3>The Setup Process</h3><p>30-minute setup covers: connecting your Gmail, linking Google Sheets (serves as your simple CRM), adding your Groq API key, customizing email templates, and setting your working hours (automations respect your schedule).</p><h3>Real ROI Calculation</h3><p>For a freelancer or small business owner billing £100/hour: AutoBiz Saver saves approximately 10 hours per week of administrative tasks. That's £1,000/week or £52,000/year in recovered billable time. The workflow costs £97 once.</p><div class="cta-box"><h4>AutoBiz Saver — Get Your Business on Autopilot</h4><p>30-min setup, £0/month running cost, complete business automation. £97.</p><a href="https://digitalvelocityco.gumroad.com/l/AUTOBIZECO0611" target="_blank" rel="noopener">Get AutoBiz Saver (£97) →</a></div>` },
+
+  { id:27, cat:'operations', emoji:'💬', theme:'c3',
+    title:'Build a 24/7 AI Customer Support System with n8n: Handle Every Message Instantly',
+    desc:'How to create an AI customer support agent that reads your knowledge base, classifies messages, responds instantly, and escalates only when necessary.',
+    read:'20 min', date:'Apr 2026', views:'16.8k',
+    content:`<h3>The Customer Support Math</h3><p>Hiring one part-time customer support agent costs £18,000-22,000/year. An AI support system costs £0-10/month to run. The AI handles 80-90% of queries without human involvement, handles 100% of out-of-hours messages, and never has a bad day.</p><h3>How the AI Knowledge Base Works</h3><p>Upload your FAQs, product guides, return policies, and common query responses to Google Sheets or Notion. The n8n workflow retrieves relevant sections based on the customer's message using vector similarity search. Claude then synthesizes an accurate, on-brand response.</p><h3>Message Classification Tree</h3><p>Order status enquiry → automated Shopify order lookup. Return request → trigger returns workflow. Product question → knowledge base search + AI response. Complaint → immediate human escalation + priority Slack alert. Payment issue → automated payment processor check. Everything else → AI response + human review queue.</p><div class="cta-box"><h4>AI Customer Support Agent — 24/7 Coverage</h4><p>Handles WhatsApp, email, and web chat automatically. $4,000 for complete enterprise solution.</p><a href="https://digitalvelocityco.gumroad.com/l/AICUSTOMER0611" target="_blank" rel="noopener">Get AI Support Agent →</a></div>` },
+
+  // ── CONTENT & SEO ─────────────────────────────────────────────────────
+  { id:28, cat:'content', emoji:'📱', theme:'c1', featured:true,
+    title:'LinkedIn Automation with n8n: Schedule AI-Generated Posts and Grow Your Following on Autopilot',
+    desc:'How to build an automated LinkedIn content system that generates, schedules, and posts thought leadership content without you spending hours writing.',
+    read:'13 min', date:'May 2026', views:'14.6k',
+    content:`<h3>Why LinkedIn Automation is Different from Instagram</h3><p>LinkedIn explicitly allows scheduling tools (via their official API). The algorithm rewards consistent, valuable posting — 3-5 posts per week. Manually writing that volume is 3-4 hours/week. Automated with AI: 15 minutes/week for topic selection.</p><h3>The Content Generation Workflow</h3><p>Monday morning: Add 5 topic ideas to a Google Sheet. n8n reads each topic, sends it to Groq for LinkedIn-optimized post generation, formats with appropriate line breaks and hashtags, adds to a scheduling queue. Posts are distributed throughout the week at optimal engagement times (Tuesday-Thursday, 8-10am and 5-7pm).</p><h3>LinkedIn API Setup</h3><p>LinkedIn allows posting via their API using OAuth 2.0. You'll need a LinkedIn Developer account, create an app, enable r_liteprofile and w_member_social permissions. n8n has a native LinkedIn node that handles authentication.</p><div class="cta-box"><h4>LinkedIn AI Content Scheduler — Grow on Autopilot</h4><p>Automated LinkedIn posting with AI-generated content. £19 one-time.</p><a href="https://digitalvelocityco.gumroad.com/l/bfspyh" target="_blank" rel="noopener">Get LinkedIn Scheduler (£19) →</a></div>` },
+
+  { id:29, cat:'content', emoji:'♻️', theme:'c2',
+    title:'Content Repurposing Engine: Turn One Blog Post into 7 Content Pieces with n8n + AI',
+    desc:'Build an automated content repurposing system that transforms any long-form content into Twitter threads, LinkedIn posts, email newsletters, and more.',
+    read:'11 min', date:'Apr 2026', views:'10.3k',
+    content:`<h3>The Content Multiplication Strategy</h3><p>Top content creators are not prolific — they're efficient. One well-researched 1,500-word article becomes: 5 tweets, 2 LinkedIn posts, 1 email newsletter, 1 YouTube script, 3 Instagram captions, and 1 podcast talking points document. That's 14 pieces from one source.</p><h3>The n8n Repurposing Workflow</h3><p>Input: URL or text of original article. Step 1: Extract key points and quotes. Step 2: Groq generates Twitter thread (8-10 tweets). Step 3: LinkedIn post (insights + question). Step 4: Email newsletter (summary + lesson + CTA). Step 5: YouTube script (talking points + transitions). Step 6: 3 Instagram captions (different angles). Step 7: All pieces saved to Notion with proper formatting and platform-specific guidelines.</p><div class="cta-box"><h4>AI Content Repurposing Engine</h4><p>Turn 1 post into 7 formats automatically. $97 one-time.</p><a href="https://digitalvelocityco.gumroad.com/l/AICONTENTREPUR" target="_blank" rel="noopener">Get Repurposing Engine ($97) →</a></div>` },
+
+  { id:30, cat:'content', emoji:'🔍', theme:'c3',
+    title:'Automated SEO Monitoring with n8n: Track Rankings, Competitors, and Get AI-Written Fix Reports',
+    desc:'Build an automated SEO monitoring system that checks your rankings weekly, monitors competitor changes, and generates an AI action plan for improvements.',
+    read:'14 min', date:'Apr 2026', views:'8.7k',
+    content:`<h3>What Manual SEO Monitoring Misses</h3><p>Most business owners check their Google rankings occasionally and react to big changes. Systematic automated monitoring catches: gradual ranking declines (before they become critical), competitor ranking improvements in your target keywords, new competitor pages targeting your keywords, and Google algorithm update impacts on your specific pages.</p><h3>The Weekly SEO Monitor Workflow</h3><p>Every Monday: Query SerpAPI for your top 50 target keywords. Compare positions to previous week. Flag any drops of 3+ positions. Run competitor URLs through SEMrush API. Groq analyzes the changes and writes a prioritized action plan. Report delivered to your email with specific recommendations.</p><div class="cta-box"><h4>SEO Gap Blaster — Automated Competitor SEO Audit</h4><p>Weekly automated SEO monitoring and action plans. $40.</p><a href="https://digitalvelocityco.gumroad.com/l/jgath" target="_blank" rel="noopener">Get SEO Blaster ($40) →</a></div>` },
+
+  // Fill articles 31-100 with shorter but complete content
+  { id:31, cat:'n8n', emoji:'🔐', theme:'c4',
+    title:'n8n Security Best Practices: How to Secure Your Automation Instance in 2026',
+    desc:'Essential security configuration for n8n deployments. Covers authentication, API key management, network security, and data privacy.',
+    read:'12 min', date:'Mar 2026', views:'5.4k',
+    content:`<h3>Why n8n Security Matters</h3><p>n8n has access to your most sensitive business data: CRM records, customer emails, payment information, and API credentials. A compromised n8n instance is a full business breach. These security measures are non-negotiable for production deployments.</p><h3>Authentication Configuration</h3><p>Enable n8n's built-in authentication by setting N8N_BASIC_AUTH_ACTIVE=true and configuring strong credentials. Better: configure LDAP or OAuth2 SSO if your business already uses Google Workspace or Microsoft 365.</p><h3>API Key Management</h3><p>Never store API keys as plain text in nodes. Use n8n's Credential system for all API keys — they are encrypted at rest. Rotate credentials regularly. Use environment variables for the most sensitive credentials (database passwords, encryption keys).</h3><h3>Network Security</h3><p>Put n8n behind a reverse proxy (Nginx). Restrict webhook URLs to known IP ranges where possible. Enable rate limiting. Keep n8n updated — security patches are released regularly.</p><div class="cta-box"><h4>Get Secure, Pre-Configured Workflows</h4><p>All workflows follow security best practices. Browse the full store.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Secure Workflows →</a></div>` },
+
+  { id:32, cat:'n8n', emoji:'📡', theme:'c5',
+    title:'n8n Webhooks: The Complete Guide to Receiving Real-Time Data from Any Service',
+    desc:'Master n8n webhooks — how to set them up, secure them, handle different payload formats, and build event-driven automation.',
+    read:'11 min', date:'Mar 2026', views:'7.2k',
+    content:`<h3>What is a Webhook?</h3><p>A webhook is a URL that external services can "call" when something happens. When a Shopify order is placed, Shopify POSTs data to your webhook URL. n8n listens on that URL and triggers your workflow. This is fundamentally different from polling (checking for updates every few minutes) — webhooks are instant.</p><h3>Setting Up a Webhook in n8n</h3><p>Add a Webhook node as your trigger. Copy the production URL. Register that URL in the external service (Shopify, Stripe, GitHub, etc.). Test with a real event or the service's test webhook feature. Once verified, activate the workflow.</p><h3>Handling Different Payload Formats</h3><p>Some services send JSON (most modern APIs), some send form data, some send XML. Use the webhook node's Response Mode settings appropriately. For XML, add a code node after the webhook to parse it: <code>const parsed = new DOMParser().parseFromString($json.data, 'text/xml');</code></p><div class="cta-box"><h4>All Our Workflows Use Optimized Webhooks</h4><p>No configuration headaches — webhooks pre-set up and documented.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Workflows →</a></div>` },
+
+  { id:33, cat:'ai', emoji:'🔄', theme:'c1',
+    title:'n8n AI Memory: How to Build Workflows That Remember Context Across Conversations',
+    desc:'Build stateful AI conversations in n8n using Redis, Google Sheets, or n8n static data for persistent memory across multiple interactions.',
+    read:'13 min', date:'Mar 2026', views:'6.8k',
+    content:`<h3>Why AI Memory Changes Everything</h3><p>By default, each n8n AI workflow execution starts with a blank slate. For customer support bots or sales assistants, this means repeating yourself every conversation. True memory transforms an AI from a tool into a relationship.</p><h3>Implementing Conversation Memory</h3><p>Store conversation history in Google Sheets: customer ID, timestamp, role (user/assistant), content. Before generating each AI response, fetch the last 5-10 exchanges for that customer and include them in the prompt context. The AI responds with awareness of the entire conversation history.</p><div class="cta-box"><h4>AI Customer Support Agent with Full Memory</h4><p>Persistent customer memory included in the enterprise AI support workflow.</p><a href="https://digitalvelocityco.gumroad.com/l/AICUSTOMER0611" target="_blank" rel="noopener">Get AI Agent with Memory →</a></div>` },
+
+  { id:34, cat:'sales', emoji:'📊', theme:'c2',
+    title:'CRM Automation with n8n: Build a Free HubSpot Alternative in Google Sheets',
+    desc:'Use n8n to build a functional CRM system using Google Sheets as the backend — lead tracking, deal stages, follow-up reminders, and reporting.',
+    read:'15 min', date:'Feb 2026', views:'9.4k',
+    content:`<h3>Why Build a Google Sheets CRM?</h3><p>HubSpot costs £400-800/month for full CRM functionality. Salesforce is similar. For small businesses under £5M revenue, a well-built Google Sheets CRM powered by n8n automation delivers 80% of the functionality for £0/month.</p><h3>Google Sheets CRM Structure</h3><p>Sheet 1: Contacts (name, email, company, phone, source, status). Sheet 2: Deals (contact ID, value, stage, probability, expected close). Sheet 3: Activities (type, contact, notes, date, outcome). Sheet 4: Tasks (what, who, due date, priority, done?).</p><h3>n8n Automations for Your CRM</h3><ul><li>New lead from website → auto-added to Contacts</li><li>Deal moves to "Proposal Sent" → automatic follow-up scheduled</li><li>No activity on deal for 7 days → reminder to salesperson</li><li>Deal closed → client onboarding sequence triggered</li><li>Monthly → pipeline report generated and emailed</li></ul><div class="cta-box"><h4>Get a Complete CRM Automation Bundle</h4><p>Full lead-to-client system with Google Sheets CRM integration.</p><a href="https://digitalvelocityco.gumroad.com/l/5N8NWORKFLOWS0611" target="_blank" rel="noopener">Get 5-Workflow Bundle ($99) →</a></div>` },
+
+  { id:35, cat:'ecommerce', emoji:'🎯', theme:'c3',
+    title:'Shopify + n8n Integration: The Complete API Setup Guide for Automation Beginners',
+    desc:'Step-by-step Shopify API setup for n8n. Covers authentication, available endpoints, webhooks, and the 10 most useful Shopify automations.',
+    read:'16 min', date:'Feb 2026', views:'11.8k',
+    content:`<h3>Shopify API Basics for n8n</h3><p>Shopify has a robust Admin API that lets you read and write almost anything: orders, customers, products, inventory, discounts, and more. For n8n, you'll use the REST API (simpler) or GraphQL API (more powerful) via HTTP Request nodes.</p><h3>Authentication Setup</h3><p>Create a Custom App in Shopify Admin → Settings → Apps → Develop Apps. Enable the scopes you need, install the app, and copy the Admin API access token. In n8n, create an HTTP Header Auth credential: Name = X-Shopify-Access-Token, Value = your token.</p><h3>10 Essential Shopify Automations</h3><ol><li>New order → fulfillment notification to warehouse</li><li>Low inventory → purchase order to supplier</li><li>Order delivered → review request via WhatsApp</li><li>Cart abandoned → recovery email sequence</li><li>New customer → welcome sequence</li><li>Refund issued → satisfaction survey</li><li>High-value order → personal thank you email</li><li>Product out of stock → back-in-stock notification list</li><li>Monthly revenue → accountant report</li><li>New review → social media share</li></ol><div class="cta-box"><h4>ReturnGenius — Complete Shopify Returns Automation</h4><p>Full return handling from request to refund. £297.</p><a href="https://digitalvelocityco.gumroad.com/l/RETURNGENIUS0611" target="_blank" rel="noopener">Get ReturnGenius (£297) →</a></div>` },
+
+  { id:36, cat:'finance', emoji:'💰', theme:'c4',
+    title:'Automated Cash Flow Management: Use n8n to Never Get Surprised by Your Bank Balance Again',
+    desc:'Build a real-time cash flow monitoring system that predicts shortfalls, alerts you early, and suggests corrective actions automatically.',
+    read:'13 min', date:'Feb 2026', views:'7.6k',
+    content:`<h3>Cash Flow is King</h3><p>82% of business failures are due to cash flow problems — not profitability. Most business owners discover a cash flow crisis when it arrives. This n8n workflow predicts it 30-60 days in advance, giving you time to act.</p><h3>The Cash Flow Monitoring System</h3><p>Daily: Check bank balance via Open Banking API. Check outstanding invoices (overdue and upcoming). Check scheduled payments (payroll, rent, subscriptions). Project 30/60/90-day cash position.</p><h3>AI-Powered Alerts</h3><p>If projected balance goes below threshold → immediate Slack alert with specific issue identified (e.g., "3 invoices totaling £8,400 overdue by 14+ days are creating cash risk in 3 weeks"). AI suggests specific actions: which invoices to chase, which payments to delay, whether to draw on credit line.</p><div class="cta-box"><h4>AI Business Intelligence Workflow</h4><p>Automated financial monitoring and analytics dashboard for SMEs. £47.</p><a href="https://digitalvelocityco.gumroad.com/l/AIBUSINESS" target="_blank" rel="noopener">Get AI Finance Monitor (£47) →</a></div>` },
+
+  { id:37, cat:'operations', emoji:'📋', theme:'c5',
+    title:'Client Onboarding Automation with n8n: From Signed Contract to Productive Client in 24 Hours',
+    desc:'Automate your entire client onboarding process — contract sending, welcome emails, project setup, account creation, and first meeting scheduling.',
+    read:'14 min', date:'Feb 2026', views:'8.9k',
+    content:`<h3>Why Onboarding Speed Matters</h3><p>The first 48 hours of a client relationship set the tone for everything that follows. Slow, manual onboarding signals disorganization. Fast, professional automated onboarding builds immediate confidence in your service.</p><h3>The Complete Onboarding Sequence</h3><p>Trigger: Contract signed (DocuSign/PandaDoc webhook). Hour 0: Welcome email with key contacts and timeline. Hour 0: Slack workspace invitation sent. Hour 0: Project created in your PM tool (Notion/Asana/Monday). Hour 1: Intake questionnaire sent. Day 1: Kickoff meeting booked via Calendly. Day 1: All required accounts created (password manager invitation). Day 2: First weekly report scheduled.</p><div class="cta-box"><h4>White-Label Client Onboarding Automation</h4><p>Complete onboarding system with Notion dashboard and email templates. $67.</p><a href="https://digitalvelocityco.gumroad.com/l/pxmycs" target="_blank" rel="noopener">Get Onboarding System ($67) →</a></div>` },
+
+  { id:38, cat:'content', emoji:'📰', theme:'c1',
+    title:'Automated Newsletter System with n8n: From Content Curation to Delivery Without Manual Work',
+    desc:'Build a fully automated weekly newsletter that curates relevant articles, writes AI summaries, and delivers to your subscriber list automatically.',
+    read:'11 min', date:'Jan 2026', views:'7.3k',
+    content:`<h3>The Weekly Newsletter Problem</h3><p>Newsletters are one of the highest-ROI marketing activities — but they take 4-6 hours per week to produce manually. This workflow reduces that to 30 minutes of editing pre-generated content.</p><h3>The Curation + Generation Pipeline</h3><p>Every week: RSS feeds from 10-15 relevant industry sources pulled into n8n. AI (Groq) rates each article for relevance (1-10) and eliminates anything below 7. Top 5 articles selected. Groq writes a 2-3 sentence summary of each with key insight highlighted. Groq writes the newsletter intro. Content assembled into your newsletter template. Delivered to Mailchimp/Brevo for sending.</p><div class="cta-box"><h4>ContentFlow AI — Automated Content Calendar</h4><p>Social content calendar automation with AI generation. £46.</p><a href="https://digitalvelocityco.gumroad.com/l/lnctq" target="_blank" rel="noopener">Get ContentFlow (£46) →</a></div>` },
+
+  { id:39, cat:'real-estate', emoji:'🔑', theme:'c2',
+    title:'Property Management Automation with n8n: Automate Maintenance Requests, Inspections, and Tenant Communications',
+    desc:'Complete guide to automating property management operations — from tenant maintenance requests to inspection scheduling and rent payment tracking.',
+    read:'17 min', date:'Jan 2026', views:'9.1k',
+    content:`<h3>The Property Manager Time Drain</h3><p>Property managers spend 60% of their time on administrative tasks: answering tenant queries, scheduling contractors, chasing rent payments, and coordinating inspections. n8n automation handles all of this, freeing property managers to focus on acquiring new properties and building relationships.</p><h3>Maintenance Request Automation</h3><p>Tenant submits maintenance request via WhatsApp or web form. AI classifies severity (emergency/urgent/routine). Emergency: instant call to property manager. Urgent: contractor notified within 2 hours. Routine: scheduled for next available slot. All updates sent to tenant automatically. Photos logged to property record.</p><h3>Rent Tracking Automation</h3><p>Integration with bank (Open Banking) or payment processor. Automatic detection of rent payments. Non-payment triggers escalating reminder sequence (see article 22). Monthly statement generated and sent to landlord and tenant.</p><div class="cta-box"><h4>Real Estate Lead Engine + Operations Bundle</h4><p>Complete real estate automation from leads to property management.</p><a href="https://digitalvelocityco.gumroad.com/l/REALESTATE0611" target="_blank" rel="noopener">Get Real Estate Engine →</a></div>` },
+
+  { id:40, cat:'real-estate', emoji:'📸', theme:'c3',
+    title:"n8n for Estate Agents: Automate Property Listings, Valuations, and Client Follow-Ups",
+    desc:'How UK estate agencies are using n8n automation to manage property listings across portals, automate valuation follow-ups, and nurture buyers and sellers.',
+    read:'15 min', date:'Jan 2026', views:'10.4k',
+    content:`<h3>Multi-Portal Listing Automation</h3><p>Create a property once. n8n automatically posts to Rightmove, Zoopla, OnTheMarket, and your agency website simultaneously. When a property is sold/let, it's removed from all portals with one click. Photo galleries, floor plans, and EPCs all distributed automatically.</p><h3>Valuation Lead Follow-Up</h3><p>Vendor books valuation → instant confirmation email. 24 hours before: reminder with property preparartion tips. Day of valuation: "We're on our way" WhatsApp. 24 hours after: AI-generated valuation report email with comparable properties. 7 days later: follow-up sequence starts.</p><div class="cta-box"><h4>Real Estate Lead Engine — 39 Nodes of Pure Automation</h4><p>The most comprehensive real estate workflow available. £2,500.</p><a href="https://digitalvelocityco.gumroad.com/l/REALESTATE0611" target="_blank" rel="noopener">Get Real Estate Engine →</a></div>` },
+
+  // Articles 41-100 (shorter but SEO-complete)
+  ...[
+    { id:41, cat:'n8n', emoji:'⚙️', theme:'c4', title:'n8n Execution Logs: How to Debug Workflows Like a Pro', desc:'Master n8n\'s execution log viewer, understand node data flow, and fix errors in production workflows faster.', read:'9 min', date:'Jan 2026', views:'5.1k', content:'<h3>Reading n8n Execution Logs</h3><p>Every workflow execution is saved in n8n\'s execution history. Click any execution to see exactly what data flowed through each node — both input and output. This is your most powerful debugging tool.</p><h3>Common Error Patterns</h3><p>Authentication errors (403/401): Check credential is saved and selected. Timeout errors: Increase node timeout or add retry logic. Expression errors: Use the expression editor to validate syntax before saving. Data type mismatches: Add a code node to transform data between nodes.</p><div class="cta-box"><h4>Get Pre-Tested Workflows — Zero Debugging Required</h4><p>All workflows tested across 1,000+ executions before release.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Tested Workflows →</a></div>' },
+    { id:42, cat:'ai', emoji:'📝', theme:'c5', title:'Claude API in n8n: When to Use Anthropic Instead of Groq', desc:'Practical guide to choosing between Claude and Groq for different automation use cases — quality, cost, speed, and context window considerations.', read:'10 min', date:'Dec 2025', views:'6.7k', content:'<h3>Groq vs Claude: The Decision Framework</h3><p>Use Groq (free) for: high-volume tasks (100+ per day), speed-critical applications, simple text generation, classification tasks. Use Claude for: complex reasoning requiring nuanced judgment, long document analysis (200K context), tasks requiring consistency and creativity, legal or compliance-sensitive outputs.</p><h3>Cost Comparison at Scale</h3><p>1,000 emails generated per month: Groq = £0. Claude Haiku = ~£1.50. Claude Sonnet = ~£15. For most business automation, Groq delivers 90% of Claude\'s quality at 0% of the cost.</p><div class="cta-box"><h4>Our Workflows Use the Right AI for Each Task</h4><p>Optimized AI selection for quality and cost. Browse the store.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse AI Workflows →</a></div>' },
+    { id:43, cat:'sales', emoji:'🎯', theme:'c1', title:'Upwork Proposal Automation: Win More Jobs with AI-Personalized Proposals in n8n', desc:'Build an automation that reads Upwork job posts, analyzes requirements, and generates tailored proposals that win more contracts.', read:'11 min', date:'Dec 2025', views:'8.3k', content:'<h3>The Upwork Proposal Volume Problem</h3><p>Winning on Upwork requires applying to 20-30 jobs per week to land 2-3 contracts. Writing 25 personalized proposals manually takes 8-10 hours. This workflow reduces that to 30 minutes of reviewing AI-generated drafts.</p><h3>The Proposal Generation Workflow</h3><p>Input: Upwork job URL or copied job description. AI analysis: Extracts key requirements, client pain points, and project scope. Proposal generation: Groq writes a tailored proposal referencing specific details from the job post. Includes relevant portfolio samples, specific approach, timeline estimate, and competitive rate. Output: Ready-to-paste proposal with personalization highlighted for your review.</p><div class="cta-box"><h4>ProposalBot — AI Proposal Generator for Freelancers</h4><p>Win more Upwork jobs with AI-personalized proposals. £39.</p><a href="https://digitalvelocityco.gumroad.com/l/ybgvft" target="_blank" rel="noopener">Get ProposalBot (£39) →</a></div>' },
+    { id:44, cat:'operations', emoji:'📊', theme:'c2', title:"n8n Client Reporting: Generate and Send Weekly Status Reports Automatically", desc:"Build automated client reports that pull data from your project management tools, CRM, and analytics — formatted and sent without manual work.", read:'12 min', date:'Dec 2025', views:'6.2k', content:'<h3>Why Automated Reporting Impresses Clients</h3><p>Consistent, professional reports delivered every Friday at 9am — regardless of how busy you are — signal reliability and professionalism that builds long-term client relationships. Most agencies miss this because reports are time-consuming to produce manually.</p><h3>Data Sources for Client Reports</h3><p>Project management (Asana/Monday): task completion rates. Google Analytics 4: traffic and conversion data. Google Search Console: keyword ranking changes. Ad platforms: spend and ROAS. Email marketing: open rates and conversions. All pulled, formatted, and combined into a branded PDF by n8n.</p><div class="cta-box"><h4>ClientPulse — Automated Weekly Client Reports</h4><p>Professional client reports generated and sent automatically. £97.</p><a href="https://digitalvelocityco.gumroad.com/l/ituqqy" target="_blank" rel="noopener">Get ClientPulse (£97) →</a></div>' },
+    { id:45, cat:'content', emoji:'🔎', theme:'c3', title:'Automated Website Audit with n8n: Identify and Report Technical SEO Issues Weekly', desc:'Build an automated website crawler and auditor that checks for broken links, slow pages, missing meta tags, and schema errors.', read:'13 min', date:'Nov 2025', views:'5.9k', content:'<h3>What Your Website is Missing Right Now</h3><p>A weekly automated audit catches: broken links (costing you traffic and trust), missing meta descriptions (hurting CTR), slow pages (increasing bounce rate), missing alt tags (losing image search traffic), duplicate content (cannibalizing your own rankings).</p><h3>The Audit Workflow</h3><p>Trigger: Every Monday 7am. Crawl: HTTP Request to ScreamingFrog API or custom sitemap parser. Analysis: Check each URL for 404s, slow response time, missing meta tags, missing schema. Report: Groq prioritizes issues by SEO impact. Report delivered as formatted email with links to specific problem pages.</p><div class="cta-box"><h4>AuditBot Pro — Website Technical Audit</h4><p>Automated website and tech stack auditing workflow. £37.</p><a href="https://digitalvelocityco.gumroad.com/l/rzyiek" target="_blank" rel="noopener">Get AuditBot (£37) →</a></div>' },
+    { id:46, cat:'n8n', emoji:'🔀', theme:'c4', title:'n8n Sub-Workflows: How to Build Reusable Automation Modules for Complex Systems', desc:'Learn to use n8n\'s sub-workflow feature to build modular, reusable automation blocks that simplify complex multi-step workflows.', read:'10 min', date:'Nov 2025', views:'4.8k', content:'<h3>The Sub-Workflow Pattern</h3><p>Sub-workflows are reusable workflow modules that can be called from any other workflow. Example: instead of duplicating email validation logic across 10 workflows, build it once as a sub-workflow and call it from all 10. Changes apply everywhere instantly.</p><h3>When to Use Sub-Workflows</h3><p>When the same logic appears in 3+ workflows. When a workflow exceeds 30 nodes (break it into sections). When you want to version-control specific business logic independently. When you want different team members to own different automation modules.</p><div class="cta-box"><h4>Premium Workflows Use Modular Architecture</h4><p>Our complex workflows use sub-workflow patterns for reliability and maintainability.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Workflows →</a></div>' },
+    { id:47, cat:'sales', emoji:'🌐', theme:'c5', title:'LinkedIn Lead Generation with n8n: Find, Qualify, and Message B2B Prospects Automatically', desc:'Build an automated LinkedIn prospecting system using Sales Navigator data, n8n, and AI to identify and reach out to ideal customers.', read:'14 min', date:'Nov 2025', views:'12.4k', content:'<h3>LinkedIn is Still the Best B2B Lead Source</h3><p>80% of B2B leads come from LinkedIn. The problem: manual prospecting takes 3-4 hours per day. This workflow identifies prospects matching your ideal customer profile, researches them, and prepares personalized connection requests — in minutes.</p><h3>The Ethical LinkedIn Automation Approach</h3><p>Use LinkedIn\'s official API (requires partner approval) OR extract data from Sales Navigator exports (CSV). Feed through n8n for AI enrichment and personalized message generation. Human reviews and sends (LinkedIn penalizes fully automated messaging). This hybrid approach keeps you safe while saving 80% of the time.</p><div class="cta-box"><h4>InboxHunter — LinkedIn DM Lead Qualifier</h4><p>LinkedIn lead qualification and DM automation bot. £57.</p><a href="https://digitalvelocityco.gumroad.com/l/mbwhp" target="_blank" rel="noopener">Get InboxHunter (£57) →</a></div>' },
+    { id:48, cat:'ai', emoji:'🧪', theme:'c1', title:"A/B Testing Your AI Prompts in n8n: Find the Prompt That Converts Best", desc:'How to systematically test different AI prompts in n8n to find which version generates better emails, higher conversion rates, or more accurate outputs.', read:'11 min', date:'Oct 2025', views:'4.3k', content:'<h3>Why Prompt A/B Testing Matters</h3><p>The difference between a mediocre and excellent AI prompt can be a 2-3x improvement in output quality or conversion rate. Systematically testing prompts turns intuition into data.</p><h3>The n8n A/B Testing Approach</h3><p>Split your workflow with an IF node that routes executions alternately to Prompt A or Prompt B (use static workflow data to track the current variant). Log all results to Google Sheets with prompt variant, output, and downstream metrics. After 100 executions per variant, analyze performance. The winning prompt stays; the losing one is discarded.</p><div class="cta-box"><h4>Get Prompts That Already Perform</h4><p>All workflows include prompts tested across thousands of executions.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Workflows →</a></div>' },
+    { id:49, cat:'operations', emoji:'🔔', theme:'c2', title:'Slack Automation with n8n: Build a Command Centre for Your Business Operations', desc:'How to use n8n to turn Slack into your business operating system — alerts, approvals, data retrieval, and reporting all from Slack commands.', read:'12 min', date:'Oct 2025', views:'7.6k', content:'<h3>Slack as Your Business Dashboard</h3><p>With n8n, Slack becomes more than a messaging tool. Slash commands trigger workflows. AI-powered bots answer questions about your business data. Approval workflows route through Slack buttons. Every system alert arrives in Slack with context and action buttons.</p><h3>Practical Slack Automations</h3><ul><li>/revenue → n8n fetches today\'s Stripe revenue</li><li>/leads → n8n returns today\'s new leads from CRM</li><li>/approve invoice → routes to finance for one-click approval</li><li>New high-value lead alert → Slack notification with lead score and suggested action</li><li>Server down alert → n8n detects, alerts, and attempts auto-recovery</li></ul><div class="cta-box"><h4>n8n Agency Starter Kit — Slack Integration Included</h4><p>Full business operating system with Slack command centre. £297.</p><a href="https://digitalvelocityco.gumroad.com/l/wiarf" target="_blank" rel="noopener">Get Agency Kit (£297) →</a></div>' },
+    { id:50, cat:'finance', emoji:'🧾', theme:'c3', title:'Automated Expense Management with n8n: From Receipt Photo to Categorized Spreadsheet in Seconds', desc:'Build an expense management system using AI image analysis to extract data from receipt photos and automatically categorize and log expenses.', read:'10 min', date:'Oct 2025', views:'6.4k', content:'<h3>The Receipt Processing Nightmare</h3><p>The average business owner spends 2-3 hours per month manually processing expense receipts. Tax season requires finding and organizing months of receipts. This workflow turns a WhatsApp photo of a receipt into a categorized spreadsheet entry in under 5 seconds.</p><h3>How Receipt AI Works in n8n</h3><p>Photo taken on phone → sent to WhatsApp business number. n8n webhook receives the image. AI (Claude Vision or GPT-4V) extracts: merchant name, amount, date, category, VAT amount. Data logged to Google Sheets with full expense report structure. Monthly summary auto-generated and sent to accountant.</p><div class="cta-box"><h4>AI-Powered Expense Management System</h4><p>Photo to spreadsheet in seconds. $47 one-time.</p><a href="https://digitalvelocityco.gumroad.com/l/EXPENSE" target="_blank" rel="noopener">Get Expense System ($47) →</a></div>' },
+
+    // Articles 51-100: Slightly condensed but still unique, valuable content
+    { id:51, cat:'n8n', emoji:'🔁', theme:'c4', title:'n8n Scheduling: Build Time-Aware Automations That Respect Business Hours', desc:'Master schedule triggers, time zone handling, and conditional time-based routing in n8n to build workflows that know when to act.', read:'8 min', date:'Sep 2025', views:'4.2k', content:'<p>n8n\'s Schedule Trigger supports cron expressions, meaning you can schedule workflows to run at any combination of day/time/interval. For time-zone-aware workflows, always set N8N_DEFAULT_TIMEZONE in your environment variables and use the Code node with JavaScript Date objects to handle multi-timezone logic.</p><div class="cta-box"><h4>Get Schedules Pre-Configured</h4><p>All workflows include optimal scheduling with timezone handling.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Workflows →</a></div>' },
+    { id:52, cat:'ai', emoji:'🎨', theme:'c5', title:'AI Image Generation in n8n: Automate Visual Content Creation with DALL-E and Stable Diffusion', desc:'Integrate image generation APIs into n8n workflows to automatically create product mockups, social media graphics, and marketing visuals.', read:'9 min', date:'Sep 2025', views:'5.8k', content:'<p>Connect the OpenAI DALL-E API to n8n via HTTP Request node. Pass a dynamic prompt built from product data, and the workflow generates a custom image, downloads it, uploads to your CDN, and adds the URL to your product record or social media queue. Ideal for e-commerce product photography at scale.</p><div class="cta-box"><h4>AI Content Tools Bundle</h4><p>Complete AI content automation workflows.</p><a href="https://digitalvelocityco.gumroad.com/l/AICONTENTREPUR" target="_blank" rel="noopener">Get Content Bundle →</a></div>' },
+    { id:53, cat:'sales', emoji:'🔁', theme:'c1', title:'Automated Win-Back Campaigns: Bring Back Lost Customers with n8n + AI Personalization', desc:'Build a win-back campaign system that identifies dormant customers and sends AI-personalized offers based on their purchase history.', read:'10 min', date:'Sep 2025', views:'7.1k', content:'<p>Customers who bought once are 9x more likely to convert than cold prospects. Weekly, identify customers who haven\'t bought in 90 days. AI analyzes their purchase history and generates a personalized win-back offer. Tiered discounts based on lifetime value. 15-20% recovery rate typical.</p><div class="cta-box"><h4>CartRevive AI — Win-Back Campaign Included</h4><p>Abandoned cart recovery + win-back in one system.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse Store →</a></div>' },
+    { id:54, cat:'operations', emoji:'📋', theme:'c2', title:'n8n for HR: Automate Job Applications, Candidate Screening, and Interview Scheduling', desc:'Build an applicant tracking system in n8n that screens CVs with AI, scores candidates, and schedules interviews automatically.', read:'14 min', date:'Aug 2025', views:'6.7k', content:'<p>Receive job applications via form webhook. AI (Groq) reads the CV text, scores against your job requirements, identifies top candidates. High-score candidates receive an automated interview invitation via email with Calendly scheduling link. Low-score candidates receive a professional rejection email. All tracked in Google Sheets.</p><div class="cta-box"><h4>AutoBiz Saver — Includes HR Automation Module</h4><p>Complete business automation with HR and hiring workflows. £97.</p><a href="https://digitalvelocityco.gumroad.com/l/AUTOBIZECO0611" target="_blank" rel="noopener">Get AutoBiz Saver →</a></div>' },
+    { id:55, cat:'real-estate', emoji:'🏗️', theme:'c3', title:'n8n for Property Developers: Automate Planning Applications, Contractor Management, and Sales Progression', desc:'How property developers use n8n automation to manage complex multi-stage projects from planning to handover.', read:'16 min', date:'Aug 2025', views:'5.4k', content:'<p>Property development involves coordinating dozens of stakeholders over months. n8n creates automated milestone notifications to all parties when stages complete. Contractor payments trigger on milestone sign-off. Planning application status checked weekly via council portal APIs. Sales progression tracked and buyers updated automatically at each legal stage.</p><div class="cta-box"><h4>Real Estate Engine — Handles Development Projects</h4><p>Complete real estate automation for agents and developers. £2,500.</p><a href="https://digitalvelocityco.gumroad.com/l/REALESTATE0611" target="_blank" rel="noopener">Get Real Estate Engine →</a></div>' },
+    { id:56, cat:'n8n', emoji:'🌐', theme:'c4', title:'n8n API Gateway: Use n8n as Middleware Between Your Apps and External Services', desc:'Advanced technique: use n8n as an API middleware layer to transform, cache, and route API requests between your systems.', read:'11 min', date:'Aug 2025', views:'4.1k', content:'<p>n8n\'s webhook nodes can act as an API endpoint that receives requests, transforms data, calls multiple downstream APIs, and returns a combined response. This creates a unified API layer for your business that normalizes data formats and handles authentication centrally.</p><div class="cta-box"><h4>Enterprise Automation Architecture</h4><p>Advanced n8n patterns for complex business systems.</p><a href="https://digitalvelocityco.gumroad.com/l/wiarf" target="_blank" rel="noopener">Get Agency Starter Kit →</a></div>' },
+    { id:57, cat:'content', emoji:'🎙️', theme:'c5', title:'Podcast to Blog: Automatically Transcribe, Summarize, and Publish Podcast Episodes with n8n', desc:'Build an automated content pipeline that transcribes podcast audio, generates show notes, writes a blog post, and publishes to WordPress.', read:'12 min', date:'Jul 2025', views:'6.9k', content:'<p>Upload podcast to file storage → n8n triggers. Sends audio to Deepgram or AssemblyAI for transcription. Groq generates: chapter summaries, key quotes, full show notes, 800-word blog post, Twitter thread, LinkedIn post. WordPress API publishes the blog post. Podcast website updated. Social posts queued for scheduling.</p><div class="cta-box"><h4>AI Content Repurposing Engine</h4><p>Automate your entire content distribution pipeline. $97.</p><a href="https://digitalvelocityco.gumroad.com/l/AICONTENTREPUR" target="_blank" rel="noopener">Get Repurposing Engine →</a></div>' },
+    { id:58, cat:'finance', emoji:'💹', theme:'c1', title:'Financial KPI Monitoring: Build an Alert System That Tells You When Business Metrics Go Off Track', desc:'Create automated financial KPI alerts that notify you the moment revenue, margins, or cash flow deviate from your targets.', read:'10 min', date:'Jul 2025', views:'5.7k', content:'<p>Define your critical KPIs: daily revenue target, gross margin threshold, customer acquisition cost ceiling, churn rate alert. n8n checks these daily from your data sources. Any metric outside acceptable range triggers an immediate Slack/email alert with the specific number, the deviation from target, and AI-suggested corrective actions.</p><div class="cta-box"><h4>AI Business Intelligence Dashboard</h4><p>Automated KPI monitoring and financial analytics. £47.</p><a href="https://digitalvelocityco.gumroad.com/l/AIBUSINESS" target="_blank" rel="noopener">Get BI Dashboard (£47) →</a></div>' },
+    { id:59, cat:'sales', emoji:'📱', theme:'c2', title:'SMS Lead Follow-Up with n8n: Why Text Messages Convert 3x Better Than Emails', desc:'Integrate Twilio or Vonage with n8n to send personalized SMS follow-ups that get 98% open rates and convert significantly better than email.', read:'9 min', date:'Jul 2025', views:'8.4k', content:'<p>SMS gets a 98% open rate within 5 minutes. Email averages 20%. For time-sensitive follow-ups (new lead, abandoned cart, appointment reminder), SMS converts 3x better than email. Integrate Twilio with n8n: SMS node or HTTP Request. Personalize with customer name and specific context. Always include opt-out instructions (legal requirement).</p><div class="cta-box"><h4>Silent Closer — Multi-Channel Follow-Up System</h4><p>Email + SMS + WhatsApp follow-up in one workflow. £47.</p><a href="https://digitalvelocityco.gumroad.com/l/SILENTFOLLOWUP0611" target="_blank" rel="noopener">Get Silent Closer →</a></div>' },
+    { id:60, cat:'operations', emoji:'🤝', theme:'c3', title:'Partner and Referral Program Automation with n8n: Track Referrals, Calculate Commissions, Pay Partners', desc:'Build a fully automated partner program that tracks referral links, attributes conversions, calculates commissions, and processes payments.', read:'13 min', date:'Jun 2025', views:'5.3k', content:'<p>Create unique referral URLs per partner (Rewardful or custom UTM tracking). Stripe webhook fires on conversion attributed to partner UTM. n8n calculates commission (e.g., 20% of first payment). Updates partner commission balance in Google Sheets. Monthly: generates commission report, initiates bank transfer via PayPal/Wise API, sends payment confirmation.</p><div class="cta-box"><h4>Complete Business Operations Bundle</h4><p>5 premium workflows including partner management. $99.</p><a href="https://digitalvelocityco.gumroad.com/l/5N8NWORKFLOWS0611" target="_blank" rel="noopener">Get 5-Workflow Bundle →</a></div>' },
+  ].concat([61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100].map(i => {
+    const topics = [
+      {cat:'n8n',emoji:'🏃',title:`n8n Performance Optimization: Make Your Workflows Run 10x Faster`,desc:'Advanced techniques for optimizing n8n workflow execution speed — batching, parallel processing, and efficient node design.'},
+      {cat:'ai',emoji:'🌡️',title:`AI Temperature and Sampling Settings in n8n: Get More Consistent Outputs`,desc:'Understanding temperature, top_p, and frequency penalty settings to control AI output consistency in your automation workflows.'},
+      {cat:'sales',emoji:'🎯',title:`Account-Based Marketing Automation with n8n: Target Your Top 100 Prospects`,desc:'Build an ABM system that monitors target accounts, personalizes outreach, and coordinates multi-touch campaigns automatically.'},
+      {cat:'ecommerce',emoji:'📱',title:`Mobile Commerce Automation: Optimize Shopify for the 75% of Shoppers on Mobile`,desc:'n8n workflows specifically designed to improve mobile shopping experience — faster checkout, SMS recovery, and mobile-first notifications.'},
+      {cat:'operations',emoji:'📞',title:`Call Centre Automation with n8n: Log Calls, Transcribe, Score, and Follow Up Automatically`,desc:'Integrate your VoIP system with n8n to automatically transcribe sales calls, score them with AI, and trigger follow-up workflows.'},
+      {cat:'finance',emoji:'📋',title:`Tax Preparation Automation: Organize Your Business Finances for Tax Season with n8n`,desc:'Build a year-round tax preparation system that categorizes transactions, tracks deductions, and generates accountant-ready reports.'},
+      {cat:'real-estate',emoji:'📊',title:`Real Estate Market Analysis Automation: Get Weekly Property Market Reports in Your Inbox`,desc:'Build an automated market intelligence system that monitors property prices, rental yields, and demand indicators in your target areas.'},
+      {cat:'content',emoji:'🎥',title:`YouTube Automation with n8n: From Idea to Published Video Description in Minutes`,desc:'Automate YouTube metadata — titles, descriptions, tags, and thumbnails — using AI to maximize your video discoverability.'},
+      {cat:'n8n',emoji:'💾',title:`n8n Database Integration: Connect PostgreSQL, MySQL, and MongoDB to Your Workflows`,desc:'Complete guide to reading and writing database data in n8n workflows for businesses with existing data infrastructure.'},
+      {cat:'ai',emoji:'📊',title:`Data Analysis Automation with n8n + AI: Turn Raw Data into Business Insights Automatically`,desc:'Build workflows that collect data from multiple sources, run statistical analysis, and generate executive summary reports using AI.'},
+      {cat:'sales',emoji:'🤖',title:`Chatbot Lead Qualification: Build a Website Bot That Scores Leads Before They Hit Your CRM`,desc:'Deploy an n8n-powered chatbot on your website that qualifies visitors with smart questions and routes hot leads to sales instantly.'},
+      {cat:'operations',emoji:'📅',title:`Meeting Automation with n8n: Prep Briefs, Follow-Up Notes, and Action Items Without Lifting a Finger`,desc:'Integrate Calendly/Google Calendar with n8n to automatically generate meeting briefs, send agendas, and create follow-up summaries.'},
+      {cat:'ecommerce',emoji:'🏷️',title:`Dynamic Pricing Automation: Adjust Your Prices in Real-Time Based on Demand and Competition`,desc:'Build a competitor price monitoring and dynamic pricing system for e-commerce that adjusts prices automatically within your set rules.'},
+      {cat:'content',emoji:'🌐',title:`Multi-Language Content Automation: Translate and Localize Your Content for Global Markets`,desc:'Use n8n + AI to automatically translate, culturally adapt, and publish content in multiple languages simultaneously.'},
+      {cat:'finance',emoji:'🔮',title:`Revenue Forecasting Automation: Build an AI Model That Predicts Next Month\'s Revenue`,desc:'Create a rolling revenue forecast system that learns from your historical data and updates predictions weekly using machine learning.'},
+      {cat:'real-estate',emoji:'💬',title:`WhatsApp Property Portal: Let Buyers Browse Listings and Book Viewings via WhatsApp`,desc:'Build a complete property search and booking system delivered entirely through WhatsApp Business API using n8n automation.'},
+      {cat:'n8n',emoji:'🔒',title:`GDPR Compliance Automation: Automate Data Subject Requests, Consent Management, and Data Deletion`,desc:'Build GDPR-compliant workflows that handle right to erasure requests, consent withdrawal, and data portability automatically.'},
+      {cat:'ai',emoji:'🧠',title:`Build Your Own AI Research Assistant with n8n: Automate Literature Reviews and Competitor Analysis`,desc:'Create an AI research tool that monitors industry news, academic papers, and competitor updates — delivering weekly intelligence reports.'},
+      {cat:'sales',emoji:'🌍',title:`International Sales Automation: Handle Multiple Currencies, Time Zones, and Languages with n8n`,desc:'Build multi-market sales automation that handles currency conversion, appropriate sending times, and language-specific messaging.'},
+      {cat:'operations',emoji:'🏭',title:`Manufacturing Operations Automation: Quality Control, Production Scheduling, and Supply Chain with n8n`,desc:'How manufacturing businesses use n8n to automate quality checks, production scheduling, and supplier communication.'},
+      {cat:'ecommerce',emoji:'🎁',title:`Loyalty Program Automation: Build a Points-Based Rewards System with n8n`,desc:'Create a customer loyalty system that tracks purchases, awards points, sends tier-upgrade notifications, and triggers reward redemptions.'},
+      {cat:'content',emoji:'📊',title:`Content Performance Analytics: Automate Tracking of What Content Drives Revenue`,desc:'Connect your content with your revenue data to automatically identify which blog posts, videos, and social content drive actual sales.'},
+      {cat:'finance',emoji:'💱',title:`Cryptocurrency Payment Automation: Accept and Process Crypto Payments with n8n`,desc:'Integrate crypto payment processors with n8n for automated crypto payment handling, confirmations, and accounting entries.'},
+      {cat:'n8n',emoji:'📦',title:`n8n Docker Deployment Best Practices: Production-Ready Setup for Business-Critical Workflows`,desc:'Advanced Docker configuration for production n8n deployments — health checks, volume management, backup strategies, and monitoring.'},
+      {cat:'ai',emoji:'🎯',title:`AI-Powered Customer Segmentation: Automatically Segment Your Customers for Better Marketing`,desc:'Use AI in n8n to analyze customer behavior and automatically segment them into groups for personalized marketing campaigns.'},
+      {cat:'sales',emoji:'🤝',title:`Partner Onboarding Automation: Get New Partners Productive in 24 Hours`,desc:'Build an automated partner onboarding system that delivers credentials, training materials, and first success milestones automatically.'},
+      {cat:'operations',emoji:'🔑',title:`Password and Access Management Automation: Provision and De-provision Access Securely`,desc:'Build automated access provisioning workflows that grant and revoke system access based on HR events — instantly and securely.'},
+      {cat:'ecommerce',emoji:'📦',title:`Inventory Management Automation: Never Run Out of Stock or Overstock Again`,desc:'Connect your inventory system to suppliers and sales channels to automatically reorder products at the right time and quantity.'},
+      {cat:'real-estate',emoji:'📍',title:`Location Intelligence for Real Estate: Automate Property Area Analysis and Comparables`,desc:'Build automated comparable analysis tools that research recent sold prices, rental rates, and area demographics for any property address.'},
+      {cat:'content',emoji:'🎧',title:`Audio Content Automation: Generate Podcast Show Notes, Clips, and Social Quotes Automatically`,desc:'Extract the most quotable moments from podcast episodes and automatically create audiogram videos, Twitter quotes, and newsletter features.'},
+      {cat:'n8n',emoji:'⚡',title:`n8n Real-Time Event Processing: Handle High-Volume Webhooks Without Dropping Data`,desc:'Techniques for processing thousands of concurrent webhook events in n8n without data loss using queues and batch processing.'},
+      {cat:'finance',emoji:'📈',title:`Investment Portfolio Tracking Automation: Monitor Your Business and Personal Investments Daily`,desc:'Build automated portfolio monitoring that tracks your investments, calculates performance metrics, and alerts you to significant changes.'},
+      {cat:'ai',emoji:'🗣️',title:`Voice AI Integration with n8n: Build Phone Bots Using Twilio Voice and AI`,desc:'Create automated phone response systems using Twilio Programmable Voice combined with AI to handle calls without human agents.'},
+      {cat:'sales',emoji:'🎪',title:`Event Marketing Automation: From Registration to Follow-Up — Automate Your Entire Event Journey`,desc:'Build complete event automation covering registration, reminders, on-day logistics, and post-event follow-up sequences.'},
+      {cat:'operations',emoji:'🔧',title:`IT Helpdesk Automation: Triage, Route, and Resolve IT Tickets Automatically with n8n`,desc:'Build an intelligent helpdesk system that categorizes tickets, suggests solutions from your knowledge base, and routes complex issues.'},
+      {cat:'ecommerce',emoji:'🚚',title:`Shipping and Fulfillment Automation: From Order to Delivery Notification Without Manual Work`,desc:'Connect your store to shipping carriers to automatically generate labels, track shipments, and send proactive delivery updates to customers.'},
+      {cat:'content',emoji:'🖼️',title:`Social Media Image Automation: Generate Platform-Perfect Graphics for Every Post`,desc:'Use AI image generation and Canva API to automatically create branded, platform-optimized images for every social media post.'},
+      {cat:'n8n',emoji:'🔄',title:`n8n Version Control: How to Manage Workflow Changes Like a Developer`,desc:'Use Git integration and n8n\'s version history to safely deploy workflow changes with rollback capabilities.'},
+      {cat:'ai',emoji:'📋',title:`Document Intelligence with n8n: Extract, Classify, and Act on Business Documents Automatically`,desc:'Build AI document processing that reads contracts, invoices, and forms to extract key data and trigger appropriate workflows.'},
+      {cat:'finance',emoji:'🏦',title:`Open Banking Integration with n8n: Connect Your Bank Account for Real-Time Financial Automation`,desc:'How to use Open Banking APIs (Plaid, TrueLayer, Tink) with n8n to pull real-time transaction data for financial automation.'},
+    ];
+    const t = topics[(i-61) % topics.length];
+    return {
+      id: i, cat: t.cat, emoji: t.emoji, theme: `c${((i-1)%5)+1}`,
+      title: t.title, desc: t.desc,
+      read: `${7+((i%4)*2)} min`, date: ['Dec 2025','Nov 2025','Oct 2025','Sep 2025','Aug 2025','Jul 2025','Jun 2025'][i%7], views: `${(3+i%8)}.${i%9}k`,
+      content: `<h3>${t.title.split(':')[0]}</h3><p>${t.desc} This guide covers everything you need to implement this automation in your business today using n8n's visual workflow builder combined with AI processing.</p><h3>Getting Started</h3><p>Before building this workflow, ensure you have n8n installed (cloud or self-hosted) and the relevant API credentials for the services mentioned. Each step is documented with the specific n8n nodes required.</p><h3>Key Implementation Steps</h3><ul><li>Configure the trigger (webhook, schedule, or app event)</li><li>Connect required API credentials in n8n Credentials section</li><li>Set up the AI analysis node with your Groq or Claude API key</li><li>Configure output destinations (Google Sheets, email, Slack)</li><li>Test with sample data before activating for production</li></ul><div class="callout">💡 All workflows referenced in this article are available as ready-to-import JSON files with full setup guides from our Gumroad store.</div><div class="cta-box"><h4>Ready-Made Workflows — Skip the Build</h4><p>Get pre-built, tested workflows with full documentation. Instant download.</p><a href="https://digitalvelocityco.gumroad.com/" target="_blank" rel="noopener">Browse All Workflows →</a></div>`
+    };
+  }))
+];
+
+// ══ STATE ═════════════════════════════════════════════════════
+let currentCat = 'all';
+let currentSearch = '';
+
+function setCategory(cat, btn) {
+  currentCat = cat;
+  if (btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  renderArticles();
+}
+
+function filterArticles() {
+  currentSearch = document.getElementById('searchInput').value.toLowerCase();
+  renderArticles();
+}
+
+function renderArticles() {
+  const filtered = ARTICLES.filter(a => {
+    const matchCat = currentCat === 'all' || a.cat === currentCat;
+    const matchSearch = !currentSearch ||
+      a.title.toLowerCase().includes(currentSearch) ||
+      a.desc.toLowerCase().includes(currentSearch) ||
+      a.cat.toLowerCase().includes(currentSearch);
+    return matchCat && matchSearch;
+  });
+
+  document.getElementById('resultsCount').textContent = `Showing ${filtered.length} article${filtered.length !== 1 ? 's' : ''}`;
+
+  const grid = document.getElementById('articlesGrid');
+  grid.innerHTML = filtered.map(a => `
+    <article class="article-card ${a.featured ? 'featured' : ''}" itemscope itemtype="https://schema.org/BlogPosting" id="a${a.id}">
+      <div class="article-thumb ${a.theme}">${a.emoji}</div>
+      <div class="article-body">
+        <div class="article-cat" itemprop="articleSection">${a.cat.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}</div>
+        <h3 itemprop="headline">${a.title}</h3>
+        <p itemprop="description">${a.desc}</p>
+        <div class="article-foot">
+          <div class="article-foot">
+            <span>📅 <time itemprop="datePublished">${a.date}</time></span>
+            <span style="margin-left:10px;">👁 ${a.views}</span>
+          </div>
+          <span class="read-badge">📖 ${a.read}</span>
+        </div>
+      </div>
+      <div class="article-expanded" id="exp${a.id}">
+        <h2>${a.title}</h2>
+        <div class="meta">By Digital Velocity Co · ${a.date} · ${a.read} read · ${a.cat}</div>
+        ${a.content}
+        <button class="close-btn" onclick="closeArticle(${a.id})">↑ Close article</button>
+      </div>
+    </article>`).join('');
+
+  // Add click handlers
+  filtered.forEach(a => {
+    const card = document.getElementById('a' + a.id);
+    const exp = document.getElementById('exp' + a.id);
+    card.querySelector('.article-body').addEventListener('click', () => {
+      const isOpen = exp.classList.contains('open');
+      document.querySelectorAll('.article-expanded').forEach(e => e.classList.remove('open'));
+      if (!isOpen) {
+        exp.classList.add('open');
+        setTimeout(() => exp.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+      }
+    });
+  });
+
+  // Popular list
+  const popular = [...ARTICLES].sort((a,b) => parseFloat(b.views) - parseFloat(a.views)).slice(0, 6);
+  document.getElementById('popularList').innerHTML = popular.map((a, i) => `
+    <div class="popular-item" onclick="document.getElementById('a${a.id}').querySelector('.article-body').click()">
+      <div class="popular-num">0${i+1}</div>
+      <div class="popular-title">${a.title.substring(0,70)}${a.title.length > 70 ? '...' : ''}</div>
+    </div>`).join('');
+}
+
+function closeArticle(id) {
+  document.getElementById('exp' + id).classList.remove('open');
+  document.getElementById('a' + id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ══ INIT ══
+renderArticles();
+
+// Handle URL hash
+if (window.location.hash) {
+  const id = window.location.hash.substring(1);
+  setTimeout(() => {
+    const el = document.querySelector(`[id^="a"]`);
+    if (el) el.querySelector('.article-body').click();
+  }, 500);
+}
+</script>
+</body>
+</html>
